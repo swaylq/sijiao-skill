@@ -1,0 +1,11 @@
+# learner state is per-user, dynamic, private — never commit
+learner-state.json
+**/learner-state.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# os
+.DS_Store
