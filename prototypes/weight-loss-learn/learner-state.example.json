@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "skill": "weight-loss",
+  "learner": {
+    "goal": "可持续减 8kg 并维持不反弹",
+    "weekly_hours": 3,
+    "prior_level": "试过节食但反弹，没系统学过原理",
+    "start_date": "2026-05-25"
+  },
+  "placement": {"dreyfus_stage": "novice", "calibrated_on": "2026-05-25"},
+  "modules": {
+    "energy-balance": {"status": "done", "mastery": 0.85, "weak_spots": [], "last_seen": "2026-05-27"},
+    "set-realistic-goals": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-05-29"},
+    "tracking-basics": {"status": "done", "mastery": 0.6, "weak_spots": ["低估油和零食的热量"], "last_seen": "2026-06-08"},
+    "protein-satiety": {"status": "done", "mastery": 0.75, "weak_spots": [], "last_seen": "2026-06-10"},
+    "meal-structure": {"status": "in_progress", "mastery": 0.4, "weak_spots": ["外食场景容易超"], "last_seen": "2026-06-15"}
+  },
+  "exercises": [
+    {"module": "tracking-basics", "kind": "project", "result": "partial", "ts": "2026-06-08"},
+    {"module": "meal-structure", "kind": "project", "result": "partial", "ts": "2026-06-15"}
+  ],
+  "misconceptions": ["以为碳水/主食是变胖元凶（其实是总热量）", "破戒一餐就觉得整天废了（全或无）"],
+  "spaced_queue": [
+    {"item": "合理减脂速率（每周 0.5-1% 体重）", "reps": 2, "interval": 6, "due": "2026-06-21"},
+    {"item": "蛋白目标 1.6-2.2 g/kg", "reps": 1, "interval": 1, "due": "2026-06-16"}
+  ],
+  "streak": {"current": 5, "longest": 12, "last_session": "2026-06-15"},
+  "honest_limits_hit": ["tracking-basics: 摄入靠自报，数据疑似低估，已提示如实记录"]
+}

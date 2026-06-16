@@ -1,0 +1,18 @@
+{
+  "name": "weight-loss-learn",
+  "skill": "weight-loss",
+  "skill_cn": "减肥（科学可持续减脂）",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "skill_type": "physical-behavioral",
+  "last_research_date": "2026-06-16",
+  "source_count": 12,
+  "primary_source_ratio": 0.83,
+  "modules_count": 13,
+  "dreyfus_ceiling": "competent",
+  "generator": "sijiao-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {"version": "0.1", "date": "2026-06-16", "note": "Reference prototype — evidence-based, sustainable fat-loss curriculum authored from established nutrition/exercise-science sources. First NON-cognitive (physical+behavioral) sample: 4 modules carry honest_limits (medical / self-reported intake / exercise form / eating-disorder boundary). NOT medical advice. Full 8-route web run via `update 私教 weight-loss`."}
+  ]
+}

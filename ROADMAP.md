@@ -13,7 +13,7 @@
   - `prompts/` — intake + 8 路调研 + 来源规范 + synthesis + quality_check
   - `references/pedagogy-framework.md` — 学习科学核心（Dreyfus / Bloom / 刻意练习 / 间隔重复 / 合意难度）
   - `references/skill-template.md` — `{skill}-learn` 产物模板
-- **三个端到端甜区样本** `prototypes/` — `rust-learn`(15) / `linear-algebra-learn`(13) / `english-reading-learn`(12)，均 novice→competent、三层齐全、DAG 经引擎校验
+- **四个端到端样本** `prototypes/` — `rust-learn`(15) / `linear-algebra-learn`(13) / `english-reading-learn`(12) / `weight-loss-learn`(13)，均 novice→competent、三层齐全、DAG 经引擎校验；`weight-loss-learn` 是第一个非认知（生理+行为）技能，演示框架的「诚实降级」（医学/自报/动作转线下）
 - **开源打包** — README（中/英）+ ROADMAP + LICENSE + MIT
 
 ## v1.x — 拓宽 + 质检自动化 🔲

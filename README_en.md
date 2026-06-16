@@ -37,8 +37,8 @@ from 0 to *competent*, and generates a tutor that **remembers where you are and 
 
 ---
 
-> 📊 &nbsp;**v0.1** — meta-skill + tooling engine (**35 tests green**, stdlib-only) + **3 end-to-end
-> samples** (rust / linear-algebra / english-reading, **40 modules**). Every sample's prereq graph is
+> 📊 &nbsp;**v0.1** — meta-skill + tooling engine (**35 tests green**, stdlib-only) + **4 end-to-end
+> samples** (rust / linear-algebra / english-reading / weight-loss, **53 modules**). Every sample's prereq graph is
 > topologically validated and its curriculum rendered by the engine.
 >
 > 🧬 &nbsp;**3rd in the family** — colleague → master → sijiao. Flips the meta-skill frame from
@@ -146,7 +146,7 @@ Every generated skill passes a learning-specific quality rubric:
 - ✅ **Primary sources** — canon recommended by ≥3 independent sources; SEO listicles / content farms rejected
 - ✅ **Honest ceiling** — `dreyfus_ceiling ≤ competent`; never claims to make an expert
 
-**Hard numbers in this repo:** 40 modules across 3 samples, all engine-validated; 35 tests over the tooling.
+**Hard numbers in this repo:** 53 modules across 4 samples, all engine-validated; 35 tests over the tooling.
 
 ### Honest limits (family DNA)
 
@@ -194,6 +194,7 @@ research routes** → distills via learning science → generates the 3-layer tu
 | **Rust** | hard-tech (cognitive sweet zone) | 15 | competent | [rust-learn/](prototypes/rust-learn/) |
 | **Linear algebra** | cognitive / math | 13 | competent | [linear-algebra-learn/](prototypes/linear-algebra-learn/) |
 | **English reading** | language · cognitive | 12 | competent | [english-reading-learn/](prototypes/english-reading-learn/) |
+| **Weight loss** | physical · behavioral (honest degradation · ⚠️ not medical advice) | 13 | competent | [weight-loss-learn/](prototypes/weight-loss-learn/) |
 
 > Sweet-zone first (cognitive/knowledge skills), mirroring how master-skill started with LLM-agent-infra
 > then expanded. Want a skill not on the list? Install it and say "learn XXX".
@@ -233,7 +234,7 @@ sijiao-skill/
 ├── prompts/       # intake + 8 research routes + source policy + synthesis + quality_check
 ├── references/    # pedagogy-framework (learning-science core) + skill-template (output template)
 ├── tools/         # curriculum_builder · learner_state · install · self_test (stdlib only)
-├── prototypes/    # 3 end-to-end samples: rust / linear-algebra / english-reading (40 modules)
+├── prototypes/    # 4 end-to-end samples: rust / linear-algebra / english-reading / weight-loss (53 modules)
 └── tests/         # 35 tests
 ```
 

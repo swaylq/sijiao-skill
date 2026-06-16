@@ -40,7 +40,7 @@
 
 ---
 
-> 📊 &nbsp;**v0.1** — 元 skill + 工具引擎（**35 测试全绿**，纯标准库零依赖）+ **3 个端到端样本**（rust / 线性代数 / 英语阅读，共 **40 模块**）跑通。每个样本的先修图都经引擎拓扑校验、课程由引擎渲染。
+> 📊 &nbsp;**v0.1** — 元 skill + 工具引擎（**35 测试全绿**，纯标准库零依赖）+ **4 个端到端样本**（rust / 线性代数 / 英语阅读 / 减肥，共 **53 模块**）跑通。每个样本的先修图都经引擎拓扑校验、课程由引擎渲染。
 >
 > 🧬 &nbsp;**家族第三代** — 站在 同事 / 大师 肩膀上，把元 skill 框架从「蒸专家」翻转成「**教你成为专家**」。
 >
@@ -150,7 +150,7 @@
 - ✅ **来源一手** — 正典资源 ≥3 处独立推荐；拒绝 SEO「十大学习法」软文 / 内容农场
 - ✅ **天花板诚实** — `dreyfus_ceiling ≤ competent`，不准吹「成为专家」
 
-**本仓 3 个样本的硬数字**：40 模块全部经引擎拓扑校验、课程由引擎渲染、`learner-state` 示例 schema 验证通过，35 个测试覆盖工具引擎。
+**本仓 4 个样本的硬数字**：53 模块全部经引擎拓扑校验、课程由引擎渲染、`learner-state` 示例 schema 验证通过，35 个测试覆盖工具引擎。
 
 ### 诚实边界（家族 DNA）
 
@@ -214,8 +214,9 @@ python3 tools/install.py list-hosts
 | **Rust 编程** | 硬技术（认知甜区） | 15 | 胜任 | [rust-learn/](prototypes/rust-learn/) |
 | **线性代数** | 认知 / 数学 | 13 | 胜任 | [linear-algebra-learn/](prototypes/linear-algebra-learn/) |
 | **英语阅读理解** | 语言 · 认知甜区 | 12 | 胜任 | [english-reading-learn/](prototypes/english-reading-learn/) |
+| **减肥（科学减脂）** | 生理 · 行为（诚实降级 · ⚠️ 非医疗建议） | 13 | 胜任 | [weight-loss-learn/](prototypes/weight-loss-learn/) |
 
-> 甜区起步（认知/知识型先跑通），对标 master-skill 从 LLM-agent-infra 起步往外扩。<br>
+> 甜区起步（认知/知识型先跑通）；**减肥样本是第一个非认知技能**，展示框架碰到生理/行为时怎么「诚实降级」——AI 教不了的（实际摄入 / 动作 / 医学情况）标注转自报 / 线下 / 医生。<br>
 > 想学不在列表里的？装上 私教.skill，说「学 XXX」就行。
 
 ---
@@ -257,7 +258,7 @@ sijiao-skill/
 ├── prompts/                  # intake + 8 路调研 + 来源规范 + synthesis + quality_check
 ├── references/               # pedagogy-framework（学习科学核心）+ skill-template（产物模板）
 ├── tools/                    # curriculum_builder · learner_state · install · self_test（纯标准库）
-├── prototypes/               # 3 个端到端样本：rust / 线性代数 / 英语阅读（40 模块）
+├── prototypes/               # 4 个端到端样本：rust / 线性代数 / 英语阅读 / 减肥（53 模块）
 └── tests/                    # 35 个测试
 ```
 
@@ -267,7 +268,7 @@ sijiao-skill/
 
 | 版本 | 内容 | 状态 |
 |------|------|------|
-| v0.1 | 元 skill + 工具引擎 + **3 个甜区样本**（rust / 线性代数 / 英语阅读）+ 打包 | ✅ |
+| v0.1 | 元 skill + 工具引擎 + **4 个样本**（rust / 线性代数 / 英语阅读 / 减肥）+ 打包 | ✅ |
 | v1.x | 质检自动化（quality_check.py / validation_gate.py）+ source_verifier + 增量刷新 update_skill.py | 🔲 |
 | v2.x | 官网（点开就能试学）+「名师教学风格」sub-skill + cli/ 练习套件 + PyPI | 🔲 |
 
