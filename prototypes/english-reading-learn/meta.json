@@ -9,7 +9,7 @@
   "primary_source_ratio": 0.83,
   "modules_count": 12,
   "dreyfus_ceiling": "competent",
-  "generator": "learn-skill v0.1 (reference prototype)",
+  "generator": "sijiao-skill v0.1 (reference prototype)",
   "version": "0.1",
   "changelog": [
     {"version": "0.1", "date": "2026-06-16", "note": "Reference prototype — curriculum authored from English-reading pedagogy canon (NGSL / graded readers / Krashen comprehensible input / Cambridge). Reading-only; AI-generated graded passages make this a strong tutorable sweet zone."}

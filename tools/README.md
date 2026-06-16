@@ -1,4 +1,4 @@
-# `tools/` — learn-skill tooling engine
+# `tools/` — sijiao-skill tooling engine
 
 Pure-Python, stdlib-only helpers reused by every generated `{skill}-learn` tutor.
 Run tests from the project root: `python -m pytest tests/ -v`.

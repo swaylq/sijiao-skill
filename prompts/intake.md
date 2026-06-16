@@ -32,7 +32,7 @@ Record the type → it sets each module's `honest_limit` defaults.
 
 ## New vs update
 
-新建 → full pipeline. `update 学习 X` → Phase 0C 增量（只刷 route 2/4/7 这些衰减快的，保护 DAG + 教学法）。
+新建 → full pipeline. `update 私教 X` → Phase 0C 增量（只刷 route 2/4/7 这些衰减快的，保护 DAG + 教学法）。
 
 ## Output → `intake.json`
 

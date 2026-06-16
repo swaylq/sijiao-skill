@@ -1,12 +1,12 @@
 # Skill Template — `{skill-slug}-learn`
 
-The standard structure 学习.skill generates as **output**. Phase 3 of `SKILL.md` reads this and
+The standard structure 私教.skill generates as **output**. Phase 3 of `SKILL.md` reads this and
 fills each `{{placeholder}}` from the Phase 2 synthesis. The pedagogy obeys
 `references/pedagogy-framework.md`. A populated example lives at `prototypes/rust-learn/`.
 
 ---
 
-## Layout (one learn-skill = one directory, three layers)
+## Layout (one sijiao-skill = one directory, three layers)
 
 ```
 {skill-slug}-learn/
@@ -102,7 +102,7 @@ Per-user, dynamic, **gitignored**. Ship a `learner-state.example.json` so users 
   "primary_source_ratio": 0.0,
   "modules_count": 0,
   "dreyfus_ceiling": "competent",
-  "generator": "learn-skill v{{X.Y}}",
+  "generator": "sijiao-skill v{{X.Y}}",
   "version": "{{X.Y}}",
   "changelog": []
 }

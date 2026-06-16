@@ -1,21 +1,21 @@
-# 学习.skill — Design Spec
+# 私教.skill — Design Spec
 
 - **Date:** 2026-06-16
 - **Author:** Skill-writer (with sway)
 - **Status:** Approved design → ready for implementation planning
-- **Repo (planned):** `learn-skill` · 学习.skill
-- **Lineage:** 同事.skill → 女娲.skill → 大师.skill → **学习.skill**
+- **Repo (planned):** `sijiao-skill` · 私教.skill
+- **Lineage:** 同事.skill → 女娲.skill → 大师.skill → **私教.skill**
 
 ---
 
 ## 1. One-liner
 
-输入任意一个想学的技能，学习.skill 自动跑 **8 路调研**，蒸馏出一套有学习科学支撑的完整学习路径，并生成一个**有状态的私教 skill**——装到任何 agent，它带你从 0 把这门技能学会。
+输入任意一个想学的技能，私教.skill 自动跑 **8 路调研**，蒸馏出一套有学习科学支撑的完整学习路径，并生成一个**有状态的私教 skill**——装到任何 agent，它带你从 0 把这门技能学会。
 
 ## 2. Positioning
 
 - **master-skill = 授人以鱼**：装上后 agent **替你**做这一行的判断。
-- **学习.skill = 授人以渔**：装上后 agent 不替你做，而是**带你自己变成会这门技能的人**。
+- **私教.skill = 授人以渔**：装上后 agent 不替你做，而是**带你自己变成会这门技能的人**。
 
 家族第四代。复用前作跑通的「元 skill」管线，但目标对象从「让 agent 扮演专家」翻转成「让用户成为专家」。
 
@@ -68,7 +68,7 @@
 5  双 agent 精炼  ← 优化「激活即开课」程度
 ```
 
-增量更新：`update 学习 X` 走 Phase 0C 路径，**SLOW_UPDATE 保护教学法内核 + 先修依赖图**（这些不衰减），只刷会烂的资源/课程/工具。
+增量更新：`update 私教 X` 走 Phase 0C 路径，**SLOW_UPDATE 保护教学法内核 + 先修依赖图**（这些不衰减），只刷会烂的资源/课程/工具。
 
 ### 8 路调研 (the new routes)
 
@@ -122,7 +122,7 @@
 }
 ```
 
-**Open question (resolve in planning):** 档案存哪——生成 skill 目录内（gitignored）vs 集中 `~/.config/learn-skill/<skill>/`（多技能 + 多 host 共享、隐私更清晰）。倾向后者，但 V1 可先放目录内。
+**Open question (resolve in planning):** 档案存哪——生成 skill 目录内（gitignored）vs 集中 `~/.config/sijiao-skill/<skill>/`（多技能 + 多 host 共享、隐私更清晰）。倾向后者，但 V1 可先放目录内。
 
 ## 8. Tutor runtime (使用时)
 
@@ -155,7 +155,7 @@
 元 skill 自身仓库结构：
 
 ```
-learn-skill/
+sijiao-skill/
 ├── SKILL.md
 ├── prompts/{intake, research/01-08, synthesis, quality_check}.md
 ├── tools/
@@ -179,9 +179,9 @@ learn-skill/
 
 ## 12. Naming
 
-- 元 skill：**学习.skill**，repo `learn-skill`（英文 slug 可再 bikeshed）。
+- 元 skill：**私教.skill**，repo `sijiao-skill`（英文 slug 可再 bikeshed）。
 - 生成物：**`{skill}-learn/`**（如 `rust-learn`、`linear-algebra-learn`、`english-reading-learn`）。
-- 触发词：「学 X」「我想学 X」「教我 X」「做个 X 的学习 skill」「update 学习 X」。
+- 触发词：「学 X」「我想学 X」「教我 X」「做个 X 的学习 skill」「update 私教 X」。
 
 ## 13. Roadmap
 
@@ -194,7 +194,7 @@ learn-skill/
 
 ## 14. Open questions (for planning)
 
-1. `learner-state.json` 存放位置（目录内 gitignored vs 集中 `~/.config/learn-skill/`）。
+1. `learner-state.json` 存放位置（目录内 gitignored vs 集中 `~/.config/sijiao-skill/`）。
 2. placement 诊断题：每个技能必做 vs 可跳过。
 3. tools 从 master-skill fork 的范围——直接 copy 改，还是抽公共库依赖。
 4. `curriculum_builder.py` 的先修图表示（DAG 文件格式 + 拓扑排序输出）。

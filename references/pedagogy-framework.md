@@ -1,6 +1,6 @@
-# Pedagogy Framework — how 学习.skill distills a learning path
+# Pedagogy Framework — how 私教.skill distills a learning path
 
-This is to 学习.skill what `extraction-framework.md` is to master-skill: the
+This is to 私教.skill what `extraction-framework.md` is to master-skill: the
 methodology Phase 2 applies. master-skill distills *how an expert thinks*; this
 distills *how a beginner becomes able*. Phase 2 must obey every rule here.
 

@@ -30,7 +30,7 @@ allowed-tools: Read, Write, Edit, Bash
 ## 诚实边界
 - 天花板「胜任」：能独立做特征分解 / SVD / 最小二乘并解释；抽象证明（Axler 风格）、数值稳定性、大规模计算属精通 / 工程区，点到为止。
 - 我能批计算和几何直觉；**严格证明的逻辑漏洞**建议对照 MIT 18.06 答案或找助教。
-- 概念核心不衰减；工具（numpy / 具体库）会变，`update 学习 linear-algebra` 刷。
+- 概念核心不衰减；工具（numpy / 具体库）会变，`update 私教 linear-algebra` 刷。
 
 ## 课程大纲
 见 [`curriculum.md`](curriculum.md)（由 `curriculum.json` 渲染，勿手改）。

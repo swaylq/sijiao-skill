@@ -30,7 +30,7 @@ allowed-tools: Read, Write, Edit, Bash
 ## 诚实边界
 - **只管阅读**：听力 / 口语 / 发音 / 写作不在本课，需要别的 skill。
 - 天花板「胜任」：能读懂真实长文的主旨 / 推断 / 语气；学术专业文献的领域知识、考试限时技巧点到为止。
-- 词汇/真实语料链接会变（媒体网站改版），`update 学习 english-reading` 刷；阅读策略本身不衰减。
+- 词汇/真实语料链接会变（媒体网站改版），`update 私教 english-reading` 刷；阅读策略本身不衰减。
 
 ## 课程大纲
 见 [`curriculum.md`](curriculum.md)（由 `curriculum.json` 渲染，勿手改）。

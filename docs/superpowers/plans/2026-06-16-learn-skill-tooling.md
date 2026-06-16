@@ -1,4 +1,4 @@
-# 学习.skill Tooling Foundation Implementation Plan
+# 私教.skill Tooling Foundation Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -54,7 +54,7 @@
 - [ ] **Step 1: Create the package + pytest path files**
 
 ```bash
-cd /Users/mac/claudeclaw/skill-writer/projects/learn-skill
+cd /Users/mac/claudeclaw/skill-writer/projects/sijiao-skill
 mkdir -p tools tests
 : > tools/__init__.py
 : > conftest.py
@@ -78,7 +78,7 @@ Expected: PASS (1 passed). If `ModuleNotFoundError: tools`, the root `conftest.p
 
 ```bash
 git add conftest.py tools/__init__.py tests/test_smoke.py
-git commit -m "chore: pytest scaffold for learn-skill tools"
+git commit -m "chore: pytest scaffold for sijiao-skill tools"
 ```
 
 ---

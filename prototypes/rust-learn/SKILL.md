@@ -29,7 +29,7 @@ allowed-tools: Read, Write, Edit, Bash
 
 ## 诚实边界
 - 天花板「胜任」：能独立搭带测试的 CLI；async / unsafe / 宏 / 嵌入式 / 真正的 trait 体操属于精通区，本课点到为止，靠之后真实项目 + 读《Rust for Rustaceans》+ 看 Crust of Rust 长。
-- 工具 / 生态衰减快（crates、edition）；语言核心（所有权 / 借用）不衰减。`update 学习 rust` 半年刷一次资源。
+- 工具 / 生态衰减快（crates、edition）；语言核心（所有权 / 借用）不衰减。`update 私教 rust` 半年刷一次资源。
 - 我能批改代码（编译 / 逻辑 / 风格），但 code review 的「品味」层面，去 users.rust-lang.org / r/rust 求真人 review。
 
 ## 课程大纲
