@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎓 私教.skill &nbsp;(私教.skill)
+# 🎓 私教.skill &nbsp;(sijiao-skill)
 
 ### Name any skill you want to learn — it distills a **stateful private tutor** that takes you from 0 to competent
 
@@ -14,7 +14,6 @@
 <br>
 
 [colleague-skill](https://github.com/titanwings/colleague-skill) distills **one person** into an AI.<br>
-[nuwa-skill](https://github.com/alchaincyf/nuwa-skill) distills **anyone's way of thinking**.<br>
 [master-skill](https://github.com/swaylq/master-skill) distills **a whole industry's judgment** — *gives you the fish*.<br>
 
 But there's something more important than doing it for you —<br>
@@ -42,7 +41,7 @@ from 0 to *competent*, and generates a tutor that **remembers where you are and 
 > samples** (rust / linear-algebra / english-reading, **40 modules**). Every sample's prereq graph is
 > topologically validated and its curriculum rendered by the engine.
 >
-> 🧬 &nbsp;**4th in the family** — colleague → nuwa → master → learning. Flips the meta-skill frame from
+> 🧬 &nbsp;**3rd in the family** — colleague → master → sijiao. Flips the meta-skill frame from
 > *distill an expert* to *teach you to become one*.
 >
 > 🎯 &nbsp;**Ceiling honestly capped at "competent"** — a tutor gets you to "can do the normal task
@@ -218,10 +217,9 @@ See [SKILL.md](SKILL.md); methodology in [references/pedagogy-framework.md](refe
 
 ---
 
-## 🧬 The four-generation family
+## 🧬 The three-generation family
 
 - **[colleague-skill](https://github.com/titanwings/colleague-skill)** — distills what **one specific person** does.
-- **[nuwa-skill](https://github.com/alchaincyf/nuwa-skill)** — distills how **anyone** thinks.
 - **[master-skill](https://github.com/swaylq/master-skill)** — distills **a whole industry's** cognition + workflow + tools (*gives you the fish*).
 - **🎓 私教.skill** — distills **a path for you to learn it yourself** (*teaches you to fish*). The first to flip the goal from "agent does it for you" to "you can do it yourself."
 
@@ -247,7 +245,7 @@ sijiao-skill/
 |---------|---------|--------|
 | v0.1 | meta-skill + tooling engine + **3 sweet-zone samples** + packaging | ✅ |
 | v1.x | quality-check automation (quality_check.py / validation_gate.py) + source_verifier + update_skill.py | 🔲 |
-| v2.x | website (try-it-live) + nuwa "great-teacher" sub-skills + cli/ drills + PyPI | 🔲 |
+| v2.x | website (try-it-live) + "great-teacher" sub-skills + cli/ drills + PyPI | 🔲 |
 
 ---
 
