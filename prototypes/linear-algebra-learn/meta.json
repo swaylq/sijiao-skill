@@ -1,0 +1,17 @@
+{
+  "name": "linear-algebra-learn",
+  "skill": "linear-algebra",
+  "skill_cn": "线性代数",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "last_research_date": "2026-06-16",
+  "source_count": 4,
+  "primary_source_ratio": 1.0,
+  "modules_count": 13,
+  "dreyfus_ceiling": "competent",
+  "generator": "learn-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {"version": "0.1", "date": "2026-06-16", "note": "Reference prototype — curriculum authored from canonical sources (MIT 18.06 / 3Blue1Brown / Strang) to demonstrate the pipeline. Research notes consolidated; rust-learn shows the full 8-route breakdown."}
+  ]
+}

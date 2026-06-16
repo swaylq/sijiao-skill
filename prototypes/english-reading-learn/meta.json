@@ -1,0 +1,17 @@
+{
+  "name": "english-reading-learn",
+  "skill": "english-reading",
+  "skill_cn": "英语阅读理解",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "last_research_date": "2026-06-16",
+  "source_count": 6,
+  "primary_source_ratio": 0.83,
+  "modules_count": 12,
+  "dreyfus_ceiling": "competent",
+  "generator": "learn-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {"version": "0.1", "date": "2026-06-16", "note": "Reference prototype — curriculum authored from English-reading pedagogy canon (NGSL / graded readers / Krashen comprehensible input / Cambridge). Reading-only; AI-generated graded passages make this a strong tutorable sweet zone."}
+  ]
+}

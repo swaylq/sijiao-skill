@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "skill": "english-reading",
+  "learner": {
+    "goal": "能读懂英文科技博客和新闻",
+    "weekly_hours": 4,
+    "prior_level": "认识约 1500 词，简单句能读，长句吃力",
+    "start_date": "2026-05-10"
+  },
+  "placement": {"dreyfus_stage": "advanced_beginner", "calibrated_on": "2026-05-10"},
+  "modules": {
+    "high-freq-vocab": {"status": "in_progress", "mastery": 0.7, "weak_spots": ["学术高频词"], "last_seen": "2026-06-15"},
+    "basic-syntax": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-05-18"},
+    "reading-mechanics": {"status": "done", "mastery": 0.8, "weak_spots": [], "last_seen": "2026-05-25"},
+    "simple-sentences": {"status": "done", "mastery": 0.85, "weak_spots": [], "last_seen": "2026-06-01"},
+    "complex-sentences": {"status": "in_progress", "mastery": 0.45, "weak_spots": ["嵌套定语从句", "找主干"], "last_seen": "2026-06-15"}
+  },
+  "exercises": [
+    {"module": "simple-sentences", "kind": "drill", "result": "pass", "ts": "2026-06-01"},
+    {"module": "complex-sentences", "kind": "drill", "result": "partial", "ts": "2026-06-15"}
+  ],
+  "misconceptions": ["遇到长句就逐字翻译（应先抓主干再补修饰）"],
+  "spaced_queue": [
+    {"item": "高频学术词 batch 3", "reps": 1, "interval": 1, "due": "2026-06-16"},
+    {"item": "定语从句找主干的方法", "reps": 2, "interval": 6, "due": "2026-06-21"}
+  ],
+  "streak": {"current": 6, "longest": 14, "last_session": "2026-06-15"},
+  "honest_limits_hit": []
+}

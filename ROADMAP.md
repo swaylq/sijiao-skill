@@ -13,12 +13,11 @@
   - `prompts/` — intake + 8 路调研 + 来源规范 + synthesis + quality_check
   - `references/pedagogy-framework.md` — 学习科学核心（Dreyfus / Bloom / 刻意练习 / 间隔重复 / 合意难度）
   - `references/skill-template.md` — `{skill}-learn` 产物模板
-- **第一个端到端样本** `prototypes/rust-learn/` — 15 模块，novice→competent，三层齐全
+- **三个端到端甜区样本** `prototypes/` — `rust-learn`(15) / `linear-algebra-learn`(13) / `english-reading-learn`(12)，均 novice→competent、三层齐全、DAG 经引擎校验
 - **开源打包** — README（中/英）+ ROADMAP + LICENSE + MIT
 
 ## v1.x — 拓宽 + 质检自动化 🔲
 
-- 再做 2 个甜区样本：**线性代数**（认知/数学，验证先修图 + 三重验证）+ **英语阅读理解**（语言甜区，AI 出题批改）
 - `quality_check.py` + `validation_gate.py` — 把 `prompts/quality_check.md` 的 10 项 rubric 落成可跑代码（加权 accept/reject）
 - `source_verifier.py` — URL 自动判类 + 黑名单强拦截（fork master-skill）
 - `update_skill.py` — Phase 0C 增量刷新（SLOW_UPDATE 保护教学法 + 先修图）

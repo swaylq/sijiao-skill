@@ -35,7 +35,7 @@
 
 ---
 
-> 📊 &nbsp;**v0.1** — 元 skill + 工具引擎（35 测试全绿）+ 第一个端到端样本 `rust-learn`（15 模块，novice→competent）跑通。
+> 📊 &nbsp;**v0.1** — 元 skill + 工具引擎（35 测试全绿）+ **3 个端到端样本**（rust / 线性代数 / 英语阅读，共 40 模块）跑通。
 >
 > 🧬 &nbsp;**家族第四代** — 站在 同事 / 女娲 / 大师 肩膀上，把元 skill 框架从「蒸专家」翻转成「教你成为专家」。
 
@@ -130,6 +130,8 @@ python3 tools/install.py list-hosts
 | 技能 | 类型 | 模块 | 路径 |
 |------|------|------|------|
 | **Rust 编程** | 硬技术（认知甜区） | 15（novice→competent） | [prototypes/rust-learn/](prototypes/rust-learn/) |
+| **线性代数** | 认知 / 数学 | 13（novice→competent） | [prototypes/linear-algebra-learn/](prototypes/linear-algebra-learn/) |
+| **英语阅读理解** | 语言 · 认知甜区 | 12（novice→competent） | [prototypes/english-reading-learn/](prototypes/english-reading-learn/) |
 
 > 想学不在列表里的？装上 learn-skill，说「学 XXX」就行。
 
@@ -160,7 +162,7 @@ learn-skill/
 ├── prompts/                  # intake + 8 路调研 + synthesis + quality_check
 ├── references/               # pedagogy-framework（学习科学核心）+ skill-template
 ├── tools/                    # curriculum_builder · learner_state · install · self_test
-├── prototypes/rust-learn/    # 第一个端到端样本
+├── prototypes/               # 3 个端到端样本：rust / 线性代数 / 英语阅读
 └── tests/                    # 35 个测试（纯标准库，零依赖）
 ```
 
@@ -170,8 +172,8 @@ learn-skill/
 
 | 版本 | 内容 | 状态 |
 |------|------|------|
-| v0.1 | 元 skill + 工具引擎 + `rust-learn` 样本 + 打包 | ✅ |
-| v1.x | 线性代数 + 英语阅读理解样本；质检自动化（quality_check.py / validation_gate.py） | 🔲 |
+| v0.1 | 元 skill + 工具引擎 + **3 个甜区样本**（rust / 线性代数 / 英语阅读）+ 打包 | ✅ |
+| v1.x | 质检自动化（quality_check.py / validation_gate.py）+ source_verifier + 增量刷新 update_skill.py | 🔲 |
 | v2.x | 官网（点开就能试学）+ 女娲蒸「名师教学风格」sub-skill + cli/ 练习套件 + PyPI | 🔲 |
 
 详见 [ROADMAP.md](ROADMAP.md)。

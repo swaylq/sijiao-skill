@@ -1,0 +1,236 @@
+{
+  "skill": "linear-algebra",
+  "modules": [
+    {
+      "id": "vectors",
+      "title": "向量与向量运算",
+      "dreyfus_stage": "novice",
+      "prereqs": [],
+      "objectives": [
+        {"text": "把向量同时理解成『一列数』和『空间中的箭头』", "bloom": "understand"},
+        {"text": "手算向量加法、数乘，并画出几何意义", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "3Blue1Brown · Essence of LA ch.1-2", "url": "https://www.3blue1brown.com/topics/linear-algebra", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给定 5 组向量，手算 2u-3v 并在坐标纸画出，再用 numpy 验证", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "matrices-basics",
+      "title": "矩阵入门：矩阵-向量乘法是线性组合",
+      "dreyfus_stage": "novice",
+      "prereqs": ["vectors"],
+      "objectives": [
+        {"text": "解释 Ax 是 A 的列向量按 x 加权的线性组合", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Unit 1 (Strang)", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "对 3 个 Ax，分别用『行点积』和『列线性组合』两种方式各算一遍，结果一致", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "matrix-operations",
+      "title": "矩阵运算：乘法、转置、逆",
+      "dreyfus_stage": "novice",
+      "prereqs": ["matrices-basics"],
+      "objectives": [
+        {"text": "手算矩阵乘法，理解它是复合线性变换", "bloom": "apply"},
+        {"text": "说清逆矩阵在解什么问题", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "3Blue1Brown · 矩阵乘法/复合", "url": "https://www.3blue1brown.com/topics/linear-algebra", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "手算两个 2x2 矩阵乘积；求一个 2x2 的逆并验证 A·A⁻¹=I", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "linear-systems",
+      "title": "线性方程组与高斯消元",
+      "dreyfus_stage": "novice",
+      "prereqs": ["matrix-operations"],
+      "objectives": [
+        {"text": "用高斯消元把 Ax=b 化成行阶梯形求解", "bloom": "apply"},
+        {"text": "判断方程组解的三种情况（唯一/无穷/无解）", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 2-3 Elimination", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "手动消元解一个 3x3 系统；构造一个无解和一个无穷解的例子各一个", "assessable": true}
+      ],
+      "milestone": {"project": "手解一个 3 元方程组并解释解的结构", "competence_check": "能独立消元到行阶梯形并判断解的情况"},
+      "honest_limit": null
+    },
+    {
+      "id": "vector-spaces",
+      "title": "向量空间与子空间",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["linear-systems"],
+      "objectives": [
+        {"text": "复述向量空间/子空间的判定条件", "bloom": "remember"},
+        {"text": "识别列空间、零空间", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 5-7 Vector Spaces", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给定矩阵 A，求出 C(A) 和 N(A) 的一组生成向量", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "span-independence",
+      "title": "张成与线性无关",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["vector-spaces"],
+      "objectives": [
+        {"text": "判断一组向量是否线性无关、张成什么空间", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "3Blue1Brown · 张成/线性无关", "url": "https://www.3blue1brown.com/topics/linear-algebra", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "对 4 组向量判定线性相关性，相关的写出一个非平凡线性组合等于零", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "basis-dimension",
+      "title": "基、维数与秩",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["span-independence"],
+      "objectives": [
+        {"text": "求子空间的一组基和维数", "bloom": "apply"},
+        {"text": "用秩联系四个基本子空间的维数", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 9-10 Independence, Basis, Dimension", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给定 A，求 rank、列空间和零空间的基与维数，验证秩-零化度定理", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "linear-transformations",
+      "title": "线性变换",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["matrix-operations", "vector-spaces"],
+      "objectives": [
+        {"text": "把矩阵理解为线性变换，读出它对基向量做了什么", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "3Blue1Brown · 线性变换与矩阵", "url": "https://www.3blue1brown.com/topics/linear-algebra", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "写出旋转 90°、剪切、缩放各自的 2x2 矩阵，并验证对 (1,0)/(0,1) 的作用", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "determinants",
+      "title": "行列式",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["matrix-operations"],
+      "objectives": [
+        {"text": "把行列式理解成面积/体积缩放因子", "bloom": "understand"},
+        {"text": "手算 2x2、3x3 行列式", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "3Blue1Brown · 行列式", "url": "https://www.3blue1brown.com/topics/linear-algebra", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "手算 3 个 3x3 行列式；解释 det=0 时变换把空间压扁了", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "eigenvalues",
+      "title": "特征值与特征向量",
+      "dreyfus_stage": "competent",
+      "prereqs": ["determinants", "linear-transformations"],
+      "objectives": [
+        {"text": "用特征多项式求特征值，再求特征向量", "bloom": "apply"},
+        {"text": "解释特征向量是变换中方向不变的向量", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 21 Eigenvalues", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "对一个 2x2 矩阵手算特征值和特征向量，numpy 验证", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "orthogonality",
+      "title": "正交性、投影与 Gram-Schmidt",
+      "dreyfus_stage": "competent",
+      "prereqs": ["basis-dimension"],
+      "objectives": [
+        {"text": "求一个向量到子空间的投影", "bloom": "apply"},
+        {"text": "用 Gram-Schmidt 正交化一组基", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 15-17 Projections, Orthogonality", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "把 R³ 中两个向量 Gram-Schmidt 正交化；求 b 到某平面的投影", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "diagonalization",
+      "title": "对角化与基变换",
+      "dreyfus_stage": "competent",
+      "prereqs": ["eigenvalues", "basis-dimension"],
+      "objectives": [
+        {"text": "把可对角化矩阵写成 A=PDP⁻¹", "bloom": "apply"},
+        {"text": "用对角化算矩阵幂 Aⁿ", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 22 Diagonalization", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "对角化一个 2x2 矩阵并用它算 A⁵，与直接连乘对照", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "svd-applications",
+      "title": "SVD 与应用：最小二乘 / PCA",
+      "dreyfus_stage": "competent",
+      "prereqs": ["diagonalization", "orthogonality"],
+      "objectives": [
+        {"text": "解释 SVD 把任意矩阵分解成旋转-缩放-旋转", "bloom": "understand"},
+        {"text": "用最小二乘拟合一条直线 / 用 PCA 找主方向", "bloom": "create"}
+      ],
+      "resources": [
+        {"title": "MIT 18.06 Lec 29 SVD", "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "project", "prompt": "对一个 2D 点集用最小二乘拟合直线，再手动+numpy 做一次 PCA 找主方向，解释两者关系", "assessable": true}
+      ],
+      "milestone": {"project": "对一个真实 2D 数据集做最小二乘 + PCA，解释每一步的几何意义", "competence_check": "能独立从数据走到 SVD/特征分解并解释结果，不只是调 numpy"},
+      "honest_limit": null
+    }
+  ]
+}

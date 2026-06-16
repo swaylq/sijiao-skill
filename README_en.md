@@ -23,8 +23,8 @@ learn-skill does the opposite of "do it for you":<br>
 
 ---
 
-> **v0.1** — meta-skill + tooling engine (35 tests green) + first end-to-end prototype
-> `rust-learn` (15 modules, novice→competent). 4th in the colleague → nuwa → master family.
+> **v0.1** — meta-skill + tooling engine (35 tests green) + **3 end-to-end prototypes**
+> (rust / linear-algebra / english-reading, 40 modules). 4th in the colleague → nuwa → master family.
 
 ## ✨ What the tutor looks like
 

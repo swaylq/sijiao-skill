@@ -1,0 +1,209 @@
+{
+  "skill": "english-reading",
+  "modules": [
+    {
+      "id": "high-freq-vocab",
+      "title": "高频词打底（前 2000-3000 词）",
+      "dreyfus_stage": "novice",
+      "prereqs": [],
+      "objectives": [
+        {"text": "认读 NGSL 高频词表前 2000 词，见词即懂不靠翻译", "bloom": "remember"}
+      ],
+      "resources": [
+        {"title": "New General Service List (NGSL)", "url": "https://www.newgeneralservicelist.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "每天 50 词检索测试：给英文词选中文义 / 给中文选英文，错的进 spaced_queue", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "basic-syntax",
+      "title": "英语句子骨架：词性与主谓宾",
+      "dreyfus_stage": "novice",
+      "prereqs": [],
+      "objectives": [
+        {"text": "识别一句话的主语、谓语、宾语和基本词性", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Simple English Wikipedia（简化真实语料）", "url": "https://simple.wikipedia.org/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给 5 个简单句，标出主谓宾，AI 核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "reading-mechanics",
+      "title": "阅读机制：略读、扫读、别逐字翻译",
+      "dreyfus_stage": "novice",
+      "prereqs": ["high-freq-vocab"],
+      "objectives": [
+        {"text": "用略读抓大意、扫读找细节，不在每个生词停下", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Breaking News English（分级真实新闻）", "url": "https://breakingnewsenglish.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "限时 60 秒略读一篇分级短文说出主旨，再扫读回答 1 个细节题", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "simple-sentences",
+      "title": "解析简单句与并列句",
+      "dreyfus_stage": "novice",
+      "prereqs": ["basic-syntax", "high-freq-vocab"],
+      "objectives": [
+        {"text": "读懂简单句和 and/but/or 连接的并列句", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Oxford Bookworms 分级读物 (Stage 1-2)", "url": "https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "读一段 Stage 1 文本，复述每句话意思，AI 核对有没有读反", "assessable": true}
+      ],
+      "milestone": {"project": "独立读完一本 Stage 1 分级读物并复述情节", "competence_check": "能不查词读懂 Stage 1 文本主线"},
+      "honest_limit": null
+    },
+    {
+      "id": "complex-sentences",
+      "title": "长难句：从句与修饰",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["simple-sentences"],
+      "objectives": [
+        {"text": "拆解定语从句、状语从句，找到句子主干", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "Oxford Bookworms (Stage 3-4)", "url": "https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给 5 个长句，先划出主干再标修饰成分，AI 核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "context-vocab-inference",
+      "title": "从上下文猜词义",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["reading-mechanics", "simple-sentences"],
+      "objectives": [
+        {"text": "不查词典，用上下文线索推断生词大致含义", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Krashen 输入假说 / 可理解输入（理论支撑）", "url": "https://www.sdkrashen.com/", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "AI 在一段文本里挖掉/给生词，你先猜义再对答案，命中率统计进档案", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "paragraph-structure",
+      "title": "段落结构：主题句与支撑",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["complex-sentences"],
+      "objectives": [
+        {"text": "定位主题句，区分主旨与细节", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "Cambridge English 阅读练习", "url": "https://www.cambridgeenglish.org/learning-english/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给 3 段文字，各标出主题句并一句话概括主旨，AI 核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "discourse-markers",
+      "title": "逻辑连接词",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["paragraph-structure"],
+      "objectives": [
+        {"text": "用 however / therefore / moreover 等判断句间逻辑关系", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Cambridge English 阅读练习", "url": "https://www.cambridgeenglish.org/learning-english/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "给挖空的连接词题，根据上下文逻辑选填，AI 核对并解释逻辑", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "inference-implicature",
+      "title": "推断与言外之意",
+      "dreyfus_stage": "competent",
+      "prereqs": ["paragraph-structure", "context-vocab-inference"],
+      "objectives": [
+        {"text": "根据文本证据做合理推断，区分『说了的』和『暗示的』", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "TOEFL/IELTS 阅读推断题型练习", "url": "https://www.ets.org/toefl/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "读短文回答推断题，必须指出支撑推断的原文句子，AI 判对错并查证据", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "tone-attitude",
+      "title": "作者语气与态度",
+      "dreyfus_stage": "competent",
+      "prereqs": ["inference-implicature"],
+      "objectives": [
+        {"text": "从用词判断作者态度（支持/批判/中立/讽刺）", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "The Economist / 时评类真实语料", "url": "https://www.economist.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "读一段时评，判断作者态度并举出 2 个体现态度的词，AI 核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "argument-structure",
+      "title": "论证结构：观点-证据-反驳",
+      "dreyfus_stage": "competent",
+      "prereqs": ["discourse-markers", "inference-implicature"],
+      "objectives": [
+        {"text": "拆出一篇议论文的主张、论据、让步与反驳", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "学术/时评长文（The Economist / Aeon）", "url": "https://aeon.co/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "读一篇议论文，画出论证结构图（主张/论据/反驳），AI 核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "genre-strategies",
+      "title": "按体裁切换阅读策略",
+      "dreyfus_stage": "competent",
+      "prereqs": ["tone-attitude", "argument-structure"],
+      "objectives": [
+        {"text": "对新闻/学术/文学/考试文本用不同阅读策略", "bloom": "create"}
+      ],
+      "resources": [
+        {"title": "混合真实语料（新闻 + 学术 + 文学节选）", "url": "https://www.economist.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "project", "prompt": "独立读一篇未简化的真实文章，回答主旨+推断+语气三类题，正确率 ≥80%", "assessable": true}
+      ],
+      "milestone": {"project": "独立读懂一篇未简化的 The Economist/Aeon 文章并答对推断与语气题", "competence_check": "能不依赖逐句翻译读懂真实英文长文的主旨、推断和作者态度"},
+      "honest_limit": null
+    }
+  ]
+}

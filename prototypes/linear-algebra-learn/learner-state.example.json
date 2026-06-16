@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "skill": "linear-algebra",
+  "learner": {
+    "goal": "为机器学习打底",
+    "weekly_hours": 5,
+    "prior_level": "高中数学，会解方程组，没学过线代",
+    "start_date": "2026-05-20"
+  },
+  "placement": {"dreyfus_stage": "advanced_beginner", "calibrated_on": "2026-05-20"},
+  "modules": {
+    "vectors": {"status": "done", "mastery": 0.95, "weak_spots": [], "last_seen": "2026-05-22"},
+    "matrices-basics": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-05-25"},
+    "matrix-operations": {"status": "done", "mastery": 0.85, "weak_spots": [], "last_seen": "2026-05-30"},
+    "linear-systems": {"status": "done", "mastery": 0.8, "weak_spots": [], "last_seen": "2026-06-05"},
+    "vector-spaces": {"status": "done", "mastery": 0.7, "weak_spots": ["零空间的几何意义"], "last_seen": "2026-06-10"},
+    "span-independence": {"status": "in_progress", "mastery": 0.5, "weak_spots": ["判定线性相关的快速方法"], "last_seen": "2026-06-15"}
+  },
+  "exercises": [
+    {"module": "linear-systems", "kind": "drill", "result": "pass", "ts": "2026-06-05"},
+    {"module": "span-independence", "kind": "drill", "result": "partial", "ts": "2026-06-15"}
+  ],
+  "misconceptions": ["以为『张成』就等于『一组基』（张成集可以有多余向量）"],
+  "spaced_queue": [
+    {"item": "向量空间判定条件", "reps": 2, "interval": 6, "due": "2026-06-21"},
+    {"item": "矩阵乘法是线性组合视角", "reps": 3, "interval": 12, "due": "2026-06-27"}
+  ],
+  "streak": {"current": 3, "longest": 11, "last_session": "2026-06-15"},
+  "honest_limits_hit": []
+}
