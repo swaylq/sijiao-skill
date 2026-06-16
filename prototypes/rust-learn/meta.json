@@ -1,0 +1,21 @@
+{
+  "name": "rust-learn",
+  "skill": "rust",
+  "skill_cn": "Rust 编程",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "last_research_date": "2026-06-16",
+  "source_count": 16,
+  "primary_source_ratio": 1.0,
+  "modules_count": 15,
+  "dreyfus_ceiling": "competent",
+  "generator": "learn-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {
+      "version": "0.1",
+      "date": "2026-06-16",
+      "note": "Reference prototype — curriculum authored from canonical Rust sources (TRPL / Rustlings / Rust by Example) to demonstrate the learn-skill pipeline end-to-end. A full 8-route web-research run (update 学习 rust) refreshes tooling/ecosystem modules and broadens sources."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "skill": "rust",
+  "learner": {
+    "goal": "转行写 Rust 后端",
+    "weekly_hours": 6,
+    "prior_level": "写过 Python，没碰过手动内存管理",
+    "start_date": "2026-06-01"
+  },
+  "placement": {"dreyfus_stage": "advanced_beginner", "calibrated_on": "2026-06-01"},
+  "modules": {
+    "setup-toolchain": {"status": "done", "mastery": 1.0, "weak_spots": [], "last_seen": "2026-06-01"},
+    "syntax-basics": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-06-03"},
+    "ownership": {"status": "done", "mastery": 0.8, "weak_spots": [], "last_seen": "2026-06-08"},
+    "borrowing-references": {"status": "in_progress", "mastery": 0.55, "weak_spots": ["&mut 与 & 同时存在的报错", "返回引用"], "last_seen": "2026-06-15"}
+  },
+  "exercises": [
+    {"module": "ownership", "kind": "drill", "result": "pass", "ts": "2026-06-08"},
+    {"module": "borrowing-references", "kind": "drill", "result": "partial", "ts": "2026-06-15"}
+  ],
+  "misconceptions": ["以为 clone 总是深拷贝（对 Rc 是浅拷贝 + 引用计数）"],
+  "spaced_queue": [
+    {"item": "借用三原则", "reps": 2, "interval": 6, "due": "2026-06-21"},
+    {"item": "move vs copy（Copy trait）", "reps": 1, "interval": 1, "due": "2026-06-16"}
+  ],
+  "streak": {"current": 4, "longest": 9, "last_session": "2026-06-15"},
+  "honest_limits_hit": []
+}
