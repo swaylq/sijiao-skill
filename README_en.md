@@ -4,7 +4,7 @@
 
 ### Name any skill you want to learn — it distills a **stateful private tutor** that takes you from 0 to competent
 
-> *"master-skill makes the judgment for you. 私教.skill trains you to make it yourself."*
+> *"Give a man a fish, or teach him to fish — master-skill makes your AI a master of the industry; 私教.skill trains YOU into a master of the field."*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)

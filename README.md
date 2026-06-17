@@ -4,7 +4,7 @@
 
 ### 输入任何想学的技能，蒸馏出一个**带你从 0 学会它**的有状态私教
 
-> *「大师替你做这一行的判断。私教.skill 把你训练成能自己做判断的人。」*
+> *「授人以鱼不如授人以渔 —— 大师.skill 让你的 AI 成为这个行业的大师，私教.skill 把你训练成这个领域的大师。」*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
