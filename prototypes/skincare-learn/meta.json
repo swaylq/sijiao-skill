@@ -1,0 +1,18 @@
+{
+  "name": "skincare-learn",
+  "skill": "skincare",
+  "skill_cn": "皮肤管理（科学护肤）",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "skill_type": "physical-behavioral",
+  "last_research_date": "2026-06-18",
+  "source_count": 12,
+  "primary_source_ratio": 0.83,
+  "modules_count": 13,
+  "dreyfus_ceiling": "competent",
+  "generator": "sijiao-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {"version": "0.1", "date": "2026-06-18", "note": "Reference prototype — evidence-based skincare curriculum authored from dermatologist/科普 sources (Lab Muffin, AAD, Dr. Dray, Paula's Choice, INCIDecoder). Non-cognitive (physical+behavioral) skill with heavy marketing noise: 4 modules carry honest_limits (can't-see-skin / patch-test / conditions-need-derm / skin-cancer ABCDE). NOT medical advice. Full 8-route web run via `update 私教 skincare`."}
+  ]
+}

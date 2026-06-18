@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "skill": "skincare",
+  "learner": {
+    "goal": "搭一套适合混油皮 + 控痘的可持续流程",
+    "weekly_hours": 2,
+    "prior_level": "跟风买过很多，没系统学过",
+    "start_date": "2026-05-28"
+  },
+  "placement": {"dreyfus_stage": "novice", "calibrated_on": "2026-05-28"},
+  "modules": {
+    "skin-basics": {"status": "done", "mastery": 0.85, "weak_spots": [], "last_seen": "2026-05-30"},
+    "identify-skin-type": {"status": "done", "mastery": 0.8, "weak_spots": ["把季节性出油当油皮"], "last_seen": "2026-06-02"},
+    "core-three": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-06-05"},
+    "sun-protection": {"status": "done", "mastery": 0.7, "weak_spots": ["防晒用量不足"], "last_seen": "2026-06-10"},
+    "build-routine": {"status": "done", "mastery": 0.75, "weak_spots": [], "last_seen": "2026-06-12"},
+    "active-ingredients": {"status": "in_progress", "mastery": 0.4, "weak_spots": ["想同时上维A+酸+维C", "分不清早晚"], "last_seen": "2026-06-16"}
+  },
+  "exercises": [
+    {"module": "sun-protection", "kind": "drill", "result": "partial", "ts": "2026-06-10"},
+    {"module": "active-ingredients", "kind": "drill", "result": "partial", "ts": "2026-06-16"}
+  ],
+  "misconceptions": ["以为越贵 / 步骤越多越好（其实基础 + 坚持最重要）", "想一次叠满所有活性物（容易刷坏屏障）"],
+  "spaced_queue": [
+    {"item": "防晒两指法用量", "reps": 1, "interval": 1, "due": "2026-06-17"},
+    {"item": "活性物早晚搭配禁忌（维A晚、维C早、别和酸乱叠）", "reps": 2, "interval": 6, "due": "2026-06-22"}
+  ],
+  "streak": {"current": 4, "longest": 10, "last_session": "2026-06-16"},
+  "honest_limits_hit": ["active-ingredients: 提醒先斑贴测试再上新活性物"]
+}

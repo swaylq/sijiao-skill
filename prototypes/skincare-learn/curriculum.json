@@ -1,0 +1,241 @@
+{
+  "skill": "skincare",
+  "modules": [
+    {
+      "id": "skin-basics",
+      "title": "皮肤怎么工作：屏障、皮脂膜、肤质",
+      "dreyfus_stage": "novice",
+      "prereqs": [],
+      "objectives": [
+        {"text": "解释皮肤屏障（角质层 + 皮脂膜）的作用，理解「护肤本质是养好屏障」", "bloom": "understand"},
+        {"text": "区分干性 / 油性 / 混合 / 敏感几种肤质的表现", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Lab Muffin Beauty Science — 皮肤屏障科普", "url": "https://labmuffin.com/", "type": "primary"},
+        {"title": "American Academy of Dermatology (AAD) — Skin care basics", "url": "https://www.aad.org/public/everyday-care/skin-care-basics", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "用自己的话写出「皮肤屏障受损会有哪些表现」3 条，我帮你核对有没有把『干』和『屏障受损』混为一谈", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "identify-skin-type",
+      "title": "判断你的肤质与主要诉求",
+      "dreyfus_stage": "novice",
+      "prereqs": ["skin-basics"],
+      "objectives": [
+        {"text": "通过『洁面后紧绷感 / 出油时间 / 是否易泛红刺痛』自测大致肤质", "bloom": "apply"},
+        {"text": "列出自己最想解决的 1-2 个诉求（而非什么都想要）", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "Paula's Choice — 肤质判断指南", "url": "https://www.paulaschoice.com/skin-type-quiz", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "做『洁面后等 30 分钟看出油/紧绷』自测，把结果 + 你的两个主诉求发我，我帮你判断是否把『暂时性状态』当成了肤质", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "AI 看不到你的皮肤。肤质自测只是粗判；持续泛红 / 脱屑 / 痤疮等若明显，可能是皮肤病而非『肤质』，需要面诊皮肤科确诊。"
+    },
+    {
+      "id": "core-three",
+      "title": "护肤三大件：清洁 + 保湿 + 防晒",
+      "dreyfus_stage": "novice",
+      "prereqs": ["identify-skin-type"],
+      "objectives": [
+        {"text": "理解 90% 的效果来自『温和清洁 + 保湿 + 防晒』这三件，而非昂贵精华", "bloom": "understand"},
+        {"text": "说清为什么防晒排第一位（抗老 + 防晒伤 + 防癌）", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Dr. Dray (皮肤科医生) — 极简护肤三件套", "url": "https://www.youtube.com/@DrDrayzday", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "把你现在用的所有护肤品列出来，按『清洁/保湿/防晒/其他』分类，发我；我帮你看是不是『其他』堆太多、基础三件反而缺", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "sun-protection",
+      "title": "防晒详解：UVA/UVB、用量、补涂",
+      "dreyfus_stage": "novice",
+      "prereqs": ["skin-basics"],
+      "objectives": [
+        {"text": "区分 UVA（老化）与 UVB（晒伤），看懂 SPF 与 PA/广谱", "bloom": "understand"},
+        {"text": "算出脸部足量（约一元硬币大小 / 两指法）并安排补涂", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "AAD — Sunscreen FAQs", "url": "https://www.aad.org/public/everyday-care/sun-protection/sunscreen-patients/sunscreen-faqs", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "按『两指法』量出你脸该用的防晒量，对比你平时用量；写出你一天里该补涂的时点，发我核对", "assessable": true}
+      ],
+      "milestone": {"project": "连续 7 天足量 + 补涂防晒并记录", "competence_check": "能不靠提醒、足量正确地用防晒"},
+      "honest_limit": null
+    },
+    {
+      "id": "build-routine",
+      "title": "搭一套极简有效的早晚流程",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["core-three"],
+      "objectives": [
+        {"text": "搭出『早：洁面→保湿→防晒；晚：洁面→保湿(→活性物)』的最小流程", "bloom": "apply"},
+        {"text": "抵制『七八个步骤』的堆叠冲动", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "r/SkincareAddiction — Routine 基础 wiki", "url": "https://www.reddit.com/r/SkincareAddiction/wiki/regimen/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "project", "prompt": "写出你的早晚极简流程（产品 + 顺序），发我；我帮你查顺序对不对、有没有冗余或冲突", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "cleansing",
+      "title": "正确清洁：别过度、别拉干",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["identify-skin-type"],
+      "objectives": [
+        {"text": "选适合肤质的温和洁面，避开高 pH 皂基把屏障洗坏", "bloom": "apply"},
+        {"text": "判断『洗后紧绷吱吱响 = 过度清洁』这个信号", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "Lab Muffin — 洁面与 pH", "url": "https://labmuffin.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "描述你洗完脸的感觉（紧绷？滑？），加上你的洁面产品，发我；我帮你判断是否过度清洁", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "moisturizing-barrier",
+      "title": "保湿与屏障修复",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["build-routine"],
+      "objectives": [
+        {"text": "区分保湿剂(humectant)/润肤剂(emollient)/封闭剂(occlusive)三类成分的作用", "bloom": "understand"},
+        {"text": "认得神经酰胺、甘油、凡士林等屏障友好成分", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Lab Muffin — 保湿成分三分类", "url": "https://labmuffin.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "把你保湿产品的成分表前几位发我，我帮你看它主要靠哪类成分、适不适合你的肤质", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "active-ingredients",
+      "title": "活性物入门：维A / 维C / 烟酰胺 / 酸",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["build-routine"],
+      "objectives": [
+        {"text": "说清维A类(抗老/痘)、维C(抗氧化/提亮)、烟酰胺、AHA/BHA 各自的证据与适用", "bloom": "analyze"},
+        {"text": "知道哪些活性物不要叠在一起、谁该早上谁该晚上", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "INCIDecoder — 成分功效查询", "url": "https://incidecoder.com/", "type": "primary"},
+        {"title": "Lab Muffin — 活性物证据综述", "url": "https://labmuffin.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "针对你的主诉求挑 1 个活性物，说出它的证据、用在早还是晚、和什么不能叠，发我核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "活性物有刺激与过敏风险。任何新产品先在耳后/手臂内侧斑贴测试 48 小时；出现持续刺痛、红肿、脱皮即停用，严重就医。"
+    },
+    {
+      "id": "patch-test-intro",
+      "title": "斑贴测试与慢引入活性物",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["active-ingredients"],
+      "objectives": [
+        {"text": "执行标准斑贴测试流程", "bloom": "apply"},
+        {"text": "按『一次只加一个、低浓度低频起步、给皮肤适应期』引入新活性物", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "AAD — How to patch test", "url": "https://www.aad.org/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "为你要加的那个活性物写一个 4 周引入计划（频率怎么爬），发我；我帮你看是不是上来太猛", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "over-exfoliation-barrier",
+      "title": "过度护肤 / 刷酸翻车与屏障修复",
+      "dreyfus_stage": "competent",
+      "prereqs": ["active-ingredients", "moisturizing-barrier"],
+      "objectives": [
+        {"text": "识别屏障受损信号（刺痛、泛红、紧绷脱屑、爆痘）", "bloom": "analyze"},
+        {"text": "执行『精简到核心 + 主修复』的屏障急救方案", "bloom": "create"}
+      ],
+      "resources": [
+        {"title": "Dr. Dray — 屏障受损修复", "url": "https://www.youtube.com/@DrDrayzday", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "假设你刷酸刷到刺痛泛红，写出你接下来 2 周的精简修复流程，发我核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "target-concerns",
+      "title": "针对诉求选成分：痘 / 抗老 / 色沉 / 敏感",
+      "dreyfus_stage": "competent",
+      "prereqs": ["active-ingredients", "patch-test-intro"],
+      "objectives": [
+        {"text": "针对一个具体诉求，组合出证据支持的成分方案", "bloom": "create"},
+        {"text": "分清『护肤品能改善的』与『需要药物/医美才能解决的』", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "Paula's Choice — 成分词典 / 诉求方案", "url": "https://www.paulaschoice.com/ingredient-dictionary", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "project", "prompt": "针对你的主诉求写一套成分方案（早晚怎么排），发我；我帮你查证据 + 标出哪些超出护肤品能力、要找医生", "assessable": true}
+      ],
+      "milestone": {"project": "一套针对自己诉求、可持续执行的护肤方案", "competence_check": "能独立按诉求选成分搭流程，并讲清每步为什么"},
+      "honest_limit": "中重度痤疮、玫瑰痤疮、湿疹、黄褐斑等是皮肤病/需医疗的问题，护肤品只能辅助。诉求严重或持续不改善，请看皮肤科，别靠堆产品。"
+    },
+    {
+      "id": "consistency-habits",
+      "title": "把护肤变成可持续习惯",
+      "dreyfus_stage": "competent",
+      "prereqs": ["build-routine"],
+      "objectives": [
+        {"text": "用『极简 + 固定时点 + 环境提示』让流程能长期坚持", "bloom": "apply"},
+        {"text": "破除『追新品、频繁换产品』导致皮肤不稳定的循环", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "r/SkincareAddiction — 长期坚持与『less is more』", "url": "https://www.reddit.com/r/SkincareAddiction/wiki/", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "写一条让你晚间流程不偷懒的 if-then + 环境改造（如防晒放门口），发我", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "when-see-derm",
+      "title": "什么时候必须找皮肤科",
+      "dreyfus_stage": "competent",
+      "prereqs": ["target-concerns"],
+      "objectives": [
+        {"text": "列出必须就医的信号（中重度痤疮、可疑痣/快速变化的斑、久不愈合、严重过敏）", "bloom": "remember"},
+        {"text": "分清自我护理的边界，不把皮肤病拖成大问题", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "AAD — When to see a dermatologist / ABCDE 痣自查", "url": "https://www.aad.org/public/diseases/skin-cancer/find/at-risk/abcdes", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "对照 ABCDE 法则自查身上的痣，把『要不要找医生』的判断写出来发我（提醒：拿不准就去看，别等）", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "可疑痣、快速变化或不愈合的皮损可能是皮肤癌信号——出现即就医，不要用本课自我诊断替代专业检查。"
+    }
+  ]
+}
