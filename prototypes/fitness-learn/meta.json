@@ -1,0 +1,18 @@
+{
+  "name": "fitness-learn",
+  "skill": "fitness",
+  "skill_cn": "健身（力量/增肌训练）",
+  "locale": "zh-CN",
+  "profile": "from-zero",
+  "skill_type": "physical-behavioral",
+  "last_research_date": "2026-06-20",
+  "source_count": 12,
+  "primary_source_ratio": 0.83,
+  "modules_count": 13,
+  "dreyfus_ceiling": "competent",
+  "generator": "sijiao-skill v0.1 (reference prototype)",
+  "version": "0.1",
+  "changelog": [
+    {"version": "0.1", "date": "2026-06-20", "note": "Reference prototype — evidence-based strength/fitness curriculum from r/Fitness wiki, Stronger By Science, Renaissance Periodization, Jeff Nippard, Barbell Medicine. Physical skill where AI CANNOT see your form (the central honest-limit): 4 modules carry honest_limits (medical clearance / can't-see-form / big-lift injury / injury-vs-soreness). NOT medical or PT advice. Full 8-route web run via `update 私教 fitness`."}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "skill": "fitness",
+  "learner": {
+    "goal": "增肌 + 学会基础杠铃动作",
+    "weekly_hours": 4,
+    "prior_level": "零基础，刚办健身卡",
+    "start_date": "2026-06-01"
+  },
+  "placement": {"dreyfus_stage": "novice", "calibrated_on": "2026-06-01"},
+  "modules": {
+    "training-principles": {"status": "done", "mastery": 0.85, "weak_spots": [], "last_seen": "2026-06-03"},
+    "set-goals-baseline": {"status": "done", "mastery": 0.9, "weak_spots": [], "last_seen": "2026-06-05"},
+    "movement-basics": {"status": "done", "mastery": 0.8, "weak_spots": [], "last_seen": "2026-06-08"},
+    "form-safety": {"status": "done", "mastery": 0.65, "weak_spots": ["深蹲膝盖内扣"], "last_seen": "2026-06-12"},
+    "beginner-program": {"status": "done", "mastery": 0.8, "weak_spots": [], "last_seen": "2026-06-14"},
+    "compound-lifts": {"status": "in_progress", "mastery": 0.4, "weak_spots": ["硬拉弓背", "想快点加重量"], "last_seen": "2026-06-18"}
+  },
+  "exercises": [
+    {"module": "form-safety", "kind": "drill", "result": "partial", "ts": "2026-06-12"},
+    {"module": "compound-lifts", "kind": "drill", "result": "partial", "ts": "2026-06-18"}
+  ],
+  "misconceptions": ["以为重量加得越快越好（形垮了容易伤）", "想抄网红的花哨五分化（新手全身练更有效）"],
+  "spaced_queue": [
+    {"item": "渐进超负荷怎么加", "reps": 2, "interval": 6, "due": "2026-06-24"},
+    {"item": "正常酸痛 vs 受伤信号", "reps": 1, "interval": 1, "due": "2026-06-20"}
+  ],
+  "streak": {"current": 6, "longest": 11, "last_session": "2026-06-18"},
+  "honest_limits_hit": ["compound-lifts: 硬拉形提醒录像对照 / 找教练，AI 看不到动作"]
+}

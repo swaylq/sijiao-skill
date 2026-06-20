@@ -1,0 +1,240 @@
+{
+  "skill": "fitness",
+  "modules": [
+    {
+      "id": "training-principles",
+      "title": "训练底层：渐进超负荷、训练量、恢复",
+      "dreyfus_stage": "novice",
+      "prereqs": [],
+      "objectives": [
+        {"text": "解释肌肉/力量增长的机制：渐进超负荷 + 足够训练量 + 恢复，三者缺一不可", "bloom": "understand"},
+        {"text": "破除『不练到力竭/不酸痛就没用』『某动作能局部减脂』等迷思", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "r/Fitness Wiki — 训练原理基础", "url": "https://thefitness.wiki/", "type": "primary"},
+        {"title": "Stronger By Science — 训练量与增长", "url": "https://www.strongerbyscience.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "用自己的话写出『渐进超负荷』是什么、为什么不加量就不长，发我核对有没有把『练得累』当成『有效』", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "set-goals-baseline",
+      "title": "设定目标与基线、现实预期",
+      "dreyfus_stage": "novice",
+      "prereqs": ["training-principles"],
+      "objectives": [
+        {"text": "明确目标（增肌 / 力量 / 体能 / 健康），不要什么都想要", "bloom": "evaluate"},
+        {"text": "建立现实预期（自然增肌速率有限，没有捷径）+ 记录起始基线", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Renaissance Periodization — 现实增肌速率", "url": "https://rpstrength.com/", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "写下你的主目标 + 起始基线（体重、几个关键动作能做多少），发我；我帮你看目标是否现实、是否贪多", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "开始规律训练前，有心血管病 / 高血压 / 关节伤病 / 孕期等情况，先让医生评估能不能练、能练什么。本课不替代医疗评估。"
+    },
+    {
+      "id": "movement-basics",
+      "title": "基础动作模式：推 / 拉 / 蹲 / 铰链 / 核心",
+      "dreyfus_stage": "novice",
+      "prereqs": ["training-principles"],
+      "objectives": [
+        {"text": "认识五大基本动作模式，理解『先学会模式，再加重量』", "bloom": "understand"},
+        {"text": "用自重 / 轻负荷把每个模式做顺", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "r/Fitness — Basic Beginner Routine 动作库", "url": "https://thefitness.wiki/routines/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "每个动作模式各选一个自重动作做几组，记录感受（哪里发力、哪里别扭），发我；我帮你判断是模式问题还是力量不足", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "form-safety",
+      "title": "动作标准与安全：形先于重量",
+      "dreyfus_stage": "novice",
+      "prereqs": ["movement-basics"],
+      "objectives": [
+        {"text": "理解为什么『标准动作 + 小重量』优于『大重量 + 歪扭』", "bloom": "understand"},
+        {"text": "建立热身 + 渐进加重的习惯，认得明显的危险信号", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Jeff Nippard — 动作教学（form）", "url": "https://www.youtube.com/@JeffNippard", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "录一段你某个动作的侧面视频自己对照教学要点找 3 个问题，把你发现的问题发我讨论（我只能基于你的描述给思路，看不到视频本身）", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "**动作标准度我隔着屏幕看不准** —— 我能讲要点、能基于你的描述给思路，但真要纠正动作，请对照教学视频自录侧面录像、或找线下教练 / 私教，尤其大重量动作。"
+    },
+    {
+      "id": "beginner-program",
+      "title": "选一套新手训练计划",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["set-goals-baseline", "movement-basics"],
+      "objectives": [
+        {"text": "理解新手为什么适合『全身 2-3 次/周』而非花哨分化", "bloom": "understand"},
+        {"text": "选定一套有信誉的新手计划并排进日程", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "r/Fitness — Basic Beginner Routine / Recommended Routine", "url": "https://thefitness.wiki/routines/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "project", "prompt": "选一套新手计划，把它排进你下周的具体日程（哪天练、练什么），发我；我帮你看频率/恢复是否现实、是否一上来就贪多", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "progressive-overload",
+      "title": "渐进超负荷与训练记录",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["beginner-program"],
+      "objectives": [
+        {"text": "执行线性进步（每次/每周小幅加重量或次数）", "bloom": "apply"},
+        {"text": "用训练日志追踪，靠数据而非感觉判断有没有进步", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Stronger By Science — 渐进与记录", "url": "https://www.strongerbyscience.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "记录你这周每个动作的重量×组×次，写出下次每个动作怎么加，发我核对加得是否过激", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "compound-lifts",
+      "title": "复合动作详解：深蹲 / 硬拉 / 卧推 / 划船 / 推举",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["form-safety", "beginner-program"],
+      "objectives": [
+        {"text": "说清每个复合动作练哪、关键技术要点、常见错误", "bloom": "analyze"},
+        {"text": "为复合动作安排合理的热身组与起始重量", "bloom": "apply"}
+      ],
+      "resources": [
+        {"title": "Jeff Nippard / Barbell Medicine — 复合动作技术", "url": "https://www.barbellmedicine.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "挑一个复合动作，写出它的关键要点 + 你自查的常见错误清单，发我讨论", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "大重量复合动作（尤其硬拉、深蹲）**形不对容易伤腰/膝** —— 起步阶段强烈建议找教练或对照录像，别凭感觉冲重量。"
+    },
+    {
+      "id": "nutrition-for-training",
+      "title": "训练营养：蛋白、热量、增肌减脂取舍",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["set-goals-baseline"],
+      "objectives": [
+        {"text": "算出蛋白目标（约 1.6-2.2 g/kg）和增肌/维持/减脂的热量方向", "bloom": "apply"},
+        {"text": "理解『增肌要略盈余、减脂要赤字，很难同时大幅兼得』", "bloom": "understand"}
+      ],
+      "resources": [
+        {"title": "Renaissance Periodization — 训练营养", "url": "https://rpstrength.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "根据你的目标算出蛋白目标 + 热量方向，列一天大致吃法，发我核对", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "recovery-sleep",
+      "title": "恢复：睡眠、训练间隔、过度训练",
+      "dreyfus_stage": "advanced_beginner",
+      "prereqs": ["training-principles"],
+      "objectives": [
+        {"text": "理解『肌肉在恢复时长，不是在训练时长』，安排足够休息", "bloom": "understand"},
+        {"text": "识别恢复不足 / 过度训练的信号（持续疲劳、力量倒退、睡眠差）", "bloom": "analyze"}
+      ],
+      "resources": [
+        {"title": "Stronger By Science — 恢复与睡眠", "url": "https://www.strongerbyscience.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "记录一周睡眠 + 训练日 + 主观疲劳（1-10），发我；我帮你看是不是恢复不够还硬练", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "program-adjustment",
+      "title": "平台期与计划调整",
+      "dreyfus_stage": "competent",
+      "prereqs": ["progressive-overload", "recovery-sleep"],
+      "objectives": [
+        {"text": "区分真平台（连续几周加不动）与正常波动", "bloom": "analyze"},
+        {"text": "用 deload / 检查恢复营养 / 换计划 三步定位并破局", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "Stronger By Science — deload 与平台", "url": "https://www.strongerbyscience.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "假设你某动作 3 周加不动了，按『先查恢复/营养 → 再考虑 deload → 必要时换计划』写出你的排查步骤，发我核对顺序", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "cardio-conditioning",
+      "title": "有氧 / 体能整合",
+      "dreyfus_stage": "competent",
+      "prereqs": ["beginner-program"],
+      "objectives": [
+        {"text": "在不显著拖累增肌的前提下安排有氧 / 体能", "bloom": "apply"},
+        {"text": "按目标决定有氧的量与时机", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "r/Fitness — 有氧与力量并行", "url": "https://thefitness.wiki/", "type": "secondary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "根据你的目标，写一个把有氧塞进当前计划的方案（频率/时机），发我看会不会冲突恢复", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": null
+    },
+    {
+      "id": "injury-prevention",
+      "title": "防伤与疼痛处理",
+      "dreyfus_stage": "competent",
+      "prereqs": ["form-safety", "recovery-sleep"],
+      "objectives": [
+        {"text": "区分正常的延迟性酸痛（DOMS）与受伤信号", "bloom": "analyze"},
+        {"text": "知道什么时候该减量 / 停训 / 就医，而不是『忍痛练』", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "Barbell Medicine — 疼痛与伤病（医生 + 举重者）", "url": "https://www.barbellmedicine.com/", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "列出你能想到的『正常酸痛 vs 该警惕』各 3 条，发我核对；记住：尖锐/关节/持续疼或麻木，停训找医生", "assessable": true}
+      ],
+      "milestone": null,
+      "honest_limit": "**关节痛、尖锐痛、持续痛、麻木刺痛不是『正常酸痛』** —— 出现就停下该动作，必要时看医生 / 理疗师，别用本课自我诊断硬扛。"
+    },
+    {
+      "id": "consistency-longterm",
+      "title": "长期坚持：把训练变成习惯",
+      "dreyfus_stage": "competent",
+      "prereqs": ["beginner-program"],
+      "objectives": [
+        {"text": "用现实可持续的频率 + 习惯设计避免三分钟热度", "bloom": "create"},
+        {"text": "破除『追完美计划却不练』，理解坚持 > 最优", "bloom": "evaluate"}
+      ],
+      "resources": [
+        {"title": "James Clear — Atomic Habits（习惯）", "url": "https://jamesclear.com/atomic-habits", "type": "primary"}
+      ],
+      "exercises": [
+        {"kind": "drill", "prompt": "写一条让你不翘训练的 if-then + 环境设计（如把训练装备/健身房路线固定），发我", "assessable": true}
+      ],
+      "milestone": {"project": "独立设计/选择并执行一套适合自己目标的训练计划，渐进超负荷 4-8 周并在卡住时正确调整", "competence_check": "能独立选/排计划、渐进加量、动作安全、平台期会调、并长期坚持，且能讲清每步原理"},
+      "honest_limit": null
+    }
+  ]
+}
