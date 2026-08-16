@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Compatible-green)](https://skills.sh)
-[![tests](https://img.shields.io/badge/tests-35%20passing-brightgreen)](tests/)
+[![CI](https://github.com/swaylq/sijiao-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/swaylq/sijiao-skill/actions/workflows/ci.yml)
 
 <br>
 
