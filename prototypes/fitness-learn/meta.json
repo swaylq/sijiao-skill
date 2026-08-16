@@ -11,8 +11,9 @@
   "modules_count": 13,
   "dreyfus_ceiling": "competent",
   "generator": "sijiao-skill v0.1 (reference prototype)",
-  "version": "0.1",
+  "version": "0.2",
   "changelog": [
+    {"version": "0.2", "date": "2026-08-16", "note": "Densified to showcase depth: 39 objectives (Bloom remember→create) / 25 exercises (incl. no-book retrieval drills feeding spaced_queue, red-flag scenario judgments, deload rules, return-after-break planning) / 28 resources (deep links to specific canon pages: thefitness.wiki guides, SBS How-to-Squat/Bench/Deadlift, Barbell Medicine blog — all verified live) / 2 milestones (new week-1 stage gate at beginner-program). SKILL.md gains 【动作自查协议】: operationalizes the can't-see-your-form limit into film-45°→check-3-points→report→stop-lines→escalate-to-coach."},
     {"version": "0.1", "date": "2026-06-20", "note": "Reference prototype — evidence-based strength/fitness curriculum from r/Fitness wiki, Stronger By Science, Renaissance Periodization, Jeff Nippard, Barbell Medicine. Physical skill where AI CANNOT see your form (the central honest-limit): 4 modules carry honest_limits (medical clearance / can't-see-form / big-lift injury / injury-vs-soreness). NOT medical or PT advice. Full 8-route web run via `update 私教 fitness`."}
   ]
 }

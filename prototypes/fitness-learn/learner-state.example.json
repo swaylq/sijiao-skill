@@ -18,12 +18,14 @@
   },
   "exercises": [
     {"module": "form-safety", "kind": "drill", "result": "partial", "ts": "2026-06-12"},
-    {"module": "compound-lifts", "kind": "drill", "result": "partial", "ts": "2026-06-18"}
+    {"module": "compound-lifts", "kind": "drill", "result": "partial", "ts": "2026-06-18"},
+    {"module": "compound-lifts", "kind": "drill", "result": "pass", "ts": "2026-06-19", "note": "动作自查协议：侧面 45° 录硬拉一组，自查出第 4 次背微圆；降重 15% 重录待复查"}
   ],
   "misconceptions": ["以为重量加得越快越好（形垮了容易伤）", "想抄网红的花哨五分化（新手全身练更有效）"],
   "spaced_queue": [
     {"item": "渐进超负荷怎么加", "reps": 2, "interval": 6, "due": "2026-06-24"},
-    {"item": "正常酸痛 vs 受伤信号", "reps": 1, "interval": 1, "due": "2026-06-20"}
+    {"item": "正常酸痛 vs 受伤信号", "reps": 1, "interval": 1, "due": "2026-06-20"},
+    {"item": "就医红旗清单：尖锐/关节/持续/麻木/夜间痛醒", "reps": 1, "interval": 3, "due": "2026-06-22"}
   ],
   "streak": {"current": 6, "longest": 11, "last_session": "2026-06-18"},
   "honest_limits_hit": ["compound-lifts: 硬拉形提醒录像对照 / 找教练，AI 看不到动作"]
