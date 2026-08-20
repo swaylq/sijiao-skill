@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sijiao.skill (私教.skill) — distil any skill into a tutor that gets you from zero</title>
+<meta name="description" content="sijiao.skill — name any skill you want to learn. It runs eight parallel research tracks, distils a learning-science path from zero to competent, and generates a stateful tutor skill that remembers where you are, sets and grades exercises at your level, and schedules spaced review. Claude Code / OpenClaw / Codex / Hermit. MIT, zero dependencies.">
+<meta name="keywords" content="sijiao.skill,sijiao-skill,私教.skill,AI tutor,adaptive learning,spaced repetition,deliberate practice,learning path,Claude Code skill,agent skill">
+<meta name="author" content="swaylq">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1a18" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://swaylq.github.io/sijiao-skill/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swaylq.github.io/sijiao-skill/">
+<link rel="alternate" hreflang="en" href="https://swaylq.github.io/sijiao-skill/en/">
+<link rel="alternate" hreflang="x-default" href="https://swaylq.github.io/sijiao-skill/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="sijiao.skill">
+<meta property="og:title" content="sijiao.skill — distil any skill into a tutor that gets you from zero">
+<meta property="og:description" content="Not a one-off study plan — a tutor that remembers where you are, grades you at your level, and schedules spaced review. Eight research tracks, learning-science distillation, ceiling honestly set at competent.">
+<meta property="og:url" content="https://swaylq.github.io/sijiao-skill/en/">
+<meta property="og:image" content="https://swaylq.github.io/sijiao-skill/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="sijiao.skill — distil any skill into a tutor that gets you from zero">
+<meta name="twitter:description" content="A stateful tutor that remembers you, grades at your level, and schedules spaced review.">
+<meta name="twitter:image" content="https://swaylq.github.io/sijiao-skill/assets/og.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "私教.skill",
+      "alternateName": ["sijiao.skill", "sijiao-skill", "私教 skill"],
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "macOS, Linux, Windows",
+      "url": "https://swaylq.github.io/sijiao-skill/",
+      "downloadUrl": "https://github.com/swaylq/sijiao-skill",
+      "codeRepository": "https://github.com/swaylq/sijiao-skill",
+      "programmingLanguage": ["Python", "Markdown"],
+      "license": "https://opensource.org/licenses/MIT",
+      "description": "输入任何想学的技能，跑 8 路调研、按学习科学蒸出一条从 0 到「胜任」的路径，生成一个有状态的私教 skill：记得你学到哪、按你水平出题批改、排间隔复习。",
+      "author": { "@type": "Person", "name": "swaylq", "url": "https://github.com/swaylq" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "私教.skill 和让 ChatGPT 列个学习计划有什么区别？",
+          "acceptedAnswer": { "@type": "Answer", "text": "学习计划是一张一次性的纸，发给你就结束了。私教.skill 生成的是一个有状态的目录：它记得你学到哪个模块、上次卡在哪、错过哪些题，按你当前水平出题并批改，还按 SM-2 算法排间隔复习。每次开课先清到期的复习项，再上新内容。" }
+        },
+        {
+          "@type": "Question",
+          "name": "它蒸出来的学习路径凭什么可信？",
+          "acceptedAnswer": { "@type": "Answer", "text": "每个生成的 skill 都要过一套学习特化质检：先修图必须无环且每条依赖挂得到来源；每个模块必须有能判对错的练习，不能是「多看书」；「会了」的标志必须行为化；正典资源需要至少 3 处独立推荐，拒绝内容农场；天花板不准吹「成为专家」。" }
+        },
+        {
+          "@type": "Question",
+          "name": "能把我教到什么程度？",
+          "acceptedAnswer": { "@type": "Answer", "text": "天花板诚实标在 Dreyfus 五段模型的「胜任」——能独立完成常规任务。精通和专家靠之后多年的真实实践，不是任何课程能给的。不告诉你局限的 skill 不值得信任。" }
+        },
+        {
+          "@type": "Question",
+          "name": "非认知技能（健身、护肤这种）也能教吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "能，但会诚实降级。AI 给不了手艺、身体和社交上的真实反馈，这类环节会明确标注转为自报、线下或真人，不假装能批改。比如英语阅读的样本就明标「只管阅读，不含听说写」。" }
+        },
+        {
+          "@type": "Question",
+          "name": "支持哪些 agent？",
+          "acceptedAnswer": { "@type": "Answer", "text": "任何读 SKILL.md 的 host，包括 Claude Code、OpenClaw、Codex、Hermit。生成出来的学习目录也能用 tools/install.py 装到指定 host。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="wordmark" href="/sijiao-skill/en/">sijiao<span class="dot">.</span>skill</a>
+    <nav class="topnav">
+      <a class="hide-sm" href="#demo">What it looks like</a>
+      <a class="hide-sm" href="#what">What it distils</a>
+      <a class="hide-sm" href="#trust">Why trust it</a>
+      <a href="#install">Install</a>
+      <a href="../">中文</a>
+      <a href="https://github.com/swaylq/sijiao-skill">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="shell hero">
+    <p class="eyebrow">私教.skill · MIT · zero dependencies</p>
+    <h1>Any skill, distilled into a tutor that gets you from zero<span class="dot">.</span></h1>
+    <p class="lede">
+      Name what you want to learn. It runs <strong>eight parallel research tracks</strong>, distils a
+      learning-science path from zero to <em>competent</em>, and generates a tutor skill that
+      <strong>remembers where you are and sets exercises at your level</strong>.
+    </p>
+
+    <blockquote class="pull">
+      "Give me a study plan" hands you a sheet of paper, once.<br>
+      This is a tutor that remembers you, drills you, and knows where you're stuck.
+    </blockquote>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/swaylq/sijiao-skill">View on GitHub →</a>
+      <a class="btn btn-ghost" href="#demo">Watch it teach</a>
+    </div>
+
+    <div class="copyline">
+      <span class="scroll"><code id="install-cmd">git clone https://github.com/swaylq/sijiao-skill.git ~/.claude/skills/sijiao-skill</code></span>
+      <button type="button" data-copy="#install-cmd">Copy</button>
+    </div>
+
+    <dl class="stats">
+      <div class="stat"><dt>Worked samples</dt><dd>6</dd></div>
+      <div class="stat"><dt>Modules distilled</dt><dd class="cut">79</dd></div>
+      <div class="stat"><dt>Research tracks</dt><dd>8</dd></div>
+      <div class="stat"><dt>Engine tests</dt><dd>35<span class="unit"> green</span></dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">What it looks like</p>
+        <h2>Not a search engine, and not a study plan</h2>
+        <p>It's "a tutor who remembers you, sitting next to you right now". Two real sessions below.</p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+          <span class="path">Session 1 · Rust — load state → clear due review → hit the weak spot</span>
+        </div>
+<pre><span class="u">you    ❯</span> continue with rust
+
+<span class="a">tutor  ❯</span> Loaded: you're on "borrowing &amp; references" <span class="hi">(mastery 0.55)</span>. Last time you
+       got stuck on having &amp;mut and &amp; alive at once. One review is due first,
+       then we go at that wall.
+
+       [Retrieval practice · the three borrow rules] No looking it up:
+       In one scope, either ___ &amp;, or ___ &amp;mut, and the two ___ coexist.
+
+<span class="u">you    ❯</span> any number of &amp;, or one &amp;mut, never both at once
+
+<span class="a">tutor  ❯</span> <span class="keep">✅ Locked in.</span> Next review scheduled 6 days out. Now today's wall —
+       this doesn't compile:
+
+         let mut v = vec![1,2,3];
+         let first = &amp;v[0];
+         v.push(4);            <span class="cut">// ← the compiler stops you here</span>
+         println!("{first}");
+
+       Before you look: first holds an immutable borrow of v, push needs &amp;mut v.
+       Which of the rules you just recited does that break?</pre>
+      </div>
+
+      <div class="terminal" style="margin-top:var(--s-4)">
+        <div class="terminal-bar">
+          <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+          <span class="path">Session 2 · Linear algebra — diagnosed as a missing intuition, not a gap in basics</span>
+        </div>
+<pre><span class="u">you    ❯</span> learning linear algebra, but eigenvalues just blank me out
+
+<span class="a">tutor  ❯</span> Loaded: you're stuck at eigenvalues, but determinants and linear maps
+       both cleared <span class="hi">(mastery 0.8+)</span> — so this isn't a gap in the basics, it's a
+       missing geometric picture. <span class="cut">Put the characteristic polynomial down.</span>
+
+       One sentence: an eigenvector is a vector this matrix only stretches —
+       its direction survives the transformation. The eigenvalue is the stretch.
+
+       Look at [[2,0],[0,3]]: it stretches the x-axis by 2 and the y-axis by 3.
+       Don't compute — can you just say its two eigenvectors and eigenvalues?
+
+<span class="u">you    ❯</span> (1,0) with 2, and (0,1) with 3
+
+<span class="a">tutor  ❯</span> <span class="keep">✅ That's the geometry.</span> Now a non-diagonal one, reasoning backwards
+       from "direction survives"…</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="what">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">What it distils</p>
+        <h2>A path built on learning science, not a pile of links</h2>
+        <p>Each generated <code>{skill}-learn</code> is a self-contained directory in three layers.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Layer</th><th>File</th><th>What's in it</th></tr></thead>
+          <tbody>
+            <tr><td>📚 Curriculum</td><td><code>curriculum.json</code></td><td>Prerequisite-ordered, Dreyfus-staged modules — each with Bloom-levelled objectives, canonical sources, gradeable exercises, milestones, and what "you've got it" looks like</td></tr>
+            <tr><td>🧑‍🏫 Teaching</td><td><code>SKILL.md</code></td><td>The tutor itself: load state → locate you → explain → worked example → fade the scaffold → independent practice → set and grade</td></tr>
+            <tr><td>🗂️ Record</td><td><code>learner-state.json</code></td><td>Your progress, missed questions, SM-2 spaced-review schedule, streaks (private, never committed)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head" style="margin-top:var(--s-16)">
+        <h2 style="font-size:var(--text-xl)">Five principles it distils against</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Principle</th><th>How it lands</th></tr></thead>
+          <tbody>
+            <tr><td>Dreyfus stages</td><td>Segments the curriculum; the ceiling is set at <em>competent</em></td></tr>
+            <tr><td>Bloom's taxonomy</td><td>Every objective carries a cognitive level: remember → understand → apply → analyse → evaluate → create</td></tr>
+            <tr><td>Deliberate practice</td><td>Every module needs an exercise producing something gradeable — never "read this book"</td></tr>
+            <tr><td>Spaced repetition + retrieval</td><td>The record schedules what's due; every session clears due items first</td></tr>
+            <tr><td>Desirable difficulty</td><td>Worked example → scaffold fades → independent practice</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trust">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">Why trust it</p>
+        <h2>How do you know the path wasn't just made up?</h2>
+        <p>Every generated skill passes a learning-specific quality gate. Any single failure blocks it.</p>
+      </div>
+      <ul class="checks">
+        <li><span class="tick">✓</span><span><b>The prerequisite graph is acyclic and sourced</b> — topological validation must come back empty, and every "learn A before B" traces to a source.</span></li>
+        <li><span class="tick">✓</span><span><b>Every module has a gradeable exercise</b> — not "read more", but "produce something that can be marked right or wrong".</span></li>
+        <li><span class="tick">✓</span><span><b>"You've got it" is behavioural</b> — "can do X unaided", never "understands X".</span></li>
+        <li><span class="tick">✓</span><span><b>Sources are first-hand</b> — canonical resources need three independent recommendations. SEO listicles and content farms are rejected.</span></li>
+        <li><span class="tick">✓</span><span><b>The ceiling is honest</b> — claiming to make you an expert is disqualifying. Mastery comes from years of real practice afterwards.</span></li>
+        <li><span class="tick">✓</span><span><b>What it can't teach, it says so</b> — AI cannot give real feedback on craft, the body, or social skill. Those steps are marked as self-reported, offline, or human, never faked.</span></li>
+      </ul>
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        Hard numbers from the six samples in this repo: all 79 modules pass engine topological validation, curricula are engine-rendered, the learner-state example validates against its schema, and 35 tests cover the tooling engine.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="samples">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">Worked samples</p>
+        <h2>Six tutors, distilled end to end</h2>
+        <p>All three layers present, prerequisite graphs engine-validated, research trail fully transparent — every module traces back to where it came from.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Modules</th><th>Ceiling</th></tr></thead>
+          <tbody>
+            <tr><td>Rust</td><td>Hard technical (the cognitive sweet spot)</td><td>15</td><td>Competent</td></tr>
+            <tr><td>Linear algebra</td><td>Cognitive / mathematical</td><td>13</td><td>Competent</td></tr>
+            <tr><td>English reading</td><td>Language · cognitive</td><td>12</td><td>Competent</td></tr>
+            <tr><td>Fat loss</td><td>Physiological · behavioural (honest downgrade)</td><td>13</td><td>Competent</td></tr>
+            <tr><td>Skincare</td><td>Physiological · behavioural (honest downgrade)</td><td>13</td><td>Competent</td></tr>
+            <tr><td>Strength training</td><td>Physiological · behavioural (honest downgrade)</td><td>13</td><td>Competent</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        Fat loss, skincare and strength training are <strong>non-cognitive</strong> skills. They're here to show how the framework downgrades honestly when it meets one — what AI can't judge gets routed to self-report, offline practice, or a doctor (⚠️ not medical advice).
+        Want something not on this list? Install it and say "teach me X".
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="install">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">Install</p>
+        <h2>One clone, any host</h2>
+        <p>Once installed, just say "teach me rust", "continue with rust", or "quiz me on rust ownership".</p>
+      </div>
+
+      <div class="copyline">
+        <span class="scroll"><code id="install-cmd-2">git clone https://github.com/swaylq/sijiao-skill.git ~/.claude/skills/sijiao-skill</code></span>
+        <button type="button" data-copy="#install-cmd-2">Copy</button>
+      </div>
+
+      <div class="table-wrap hosts">
+        <table>
+          <thead><tr><th>Host</th><th>Target path</th></tr></thead>
+          <tbody>
+            <tr><td>Claude Code</td><td><code>~/.claude/skills/sijiao-skill</code></td></tr>
+            <tr><td>OpenClaw</td><td><code>~/.openclaw/skills/sijiao-skill</code></td></tr>
+            <tr><td>Codex</td><td><code>~/.codex/skills/sijiao-skill</code></td></tr>
+            <tr><td>Hermit</td><td><code>~/.hermit/skills/sijiao-skill</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        It confirms five things first (the skill, your current level, your goal, hours per week, language), then kicks off eight parallel research tracks, distils against learning science, and writes the three-layer tutor directory. Thirty to sixty minutes later you have a <code>{skill}-learn</code> you can install into any agent and start immediately.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-line">
+      <a href="https://github.com/swaylq/sijiao-skill">GitHub</a>
+      <a href="https://github.com/swaylq/sijiao-skill/blob/main/SKILL.md">SKILL.md</a>
+      <a href="https://github.com/swaylq/sijiao-skill/tree/main/prototypes">Six samples</a>
+      <a href="https://master-skill.org/">大师.skill ↗</a>
+      <a href="../">中文</a>
+      <span style="color:var(--ink-faint)">MIT © <a href="https://github.com/swaylq">swaylq</a></span>
+    </div>
+    <p class="closing">
+      <a href="https://master-skill.org/">大师.skill</a> makes your AI the expert — <em>it hands you the fish.</em><br>
+      sijiao.skill makes <em>you</em> the expert — it teaches you to fish.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.querySelector(btn.dataset.copy).textContent.trim();
+    navigator.clipboard.writeText(text).then(function () {
+      var old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = old; }, 1600);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

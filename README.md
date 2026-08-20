@@ -6,6 +6,7 @@
 
 > *「授人以鱼不如授人以渔 —— 大师.skill 让你的 AI 成为这个行业的大师，私教.skill 把你训练成这个领域的大师。」*
 
+[![Website](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-sijiao--skill-1a1a1a)](https://swaylq.github.io/sijiao-skill/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
 [![skills.sh](https://img.shields.io/badge/skills.sh-Compatible-green)](https://skills.sh)
@@ -32,7 +33,7 @@
 
 <br>
 
-[🚀 安装](#-安装) · [✨ 私教长什么样](#-私教长什么样) · [🧠 它蒸了什么](#-它蒸了什么) · [🔍 凭什么信它](#-凭什么相信它蒸出来的东西) · [⭐ 样本](#-已蒸馏的样本) · [🧬 三代谱系](#-三代谱系)
+[🌐 官网](https://swaylq.github.io/sijiao-skill/) · [🚀 安装](#-安装) · [✨ 私教长什么样](#-私教长什么样) · [🧠 它蒸了什么](#-它蒸了什么) · [🔍 凭什么信它](#-凭什么相信它蒸出来的东西) · [⭐ 样本](#-已蒸馏的样本) · [🧬 三代谱系](#-三代谱系)
 
 [**English README →**](README_en.md)
 

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>私教.skill —— 把任何技能蒸馏成一个带你从 0 学会它的私教</title>
+<meta name="description" content="私教.skill（sijiao.skill）：输入任何想学的技能，跑 8 路调研、按学习科学蒸出一条从 0 到「胜任」的路径，生成一个记得你学到哪、按你水平自适应出题批改、排间隔复习的有状态私教 skill。支持 Claude Code / OpenClaw / Codex / Hermit，MIT 开源，零依赖。">
+<meta name="keywords" content="私教.skill,私教 skill,sijiao.skill,sijiao-skill,AI 私教,AI 家教,学习路径,间隔重复,刻意练习,Claude Code skill,agent skill,自适应学习">
+<meta name="author" content="swaylq">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1a18" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://swaylq.github.io/sijiao-skill/">
+<link rel="alternate" hreflang="zh-Hans" href="https://swaylq.github.io/sijiao-skill/">
+<link rel="alternate" hreflang="en" href="https://swaylq.github.io/sijiao-skill/en/">
+<link rel="alternate" hreflang="x-default" href="https://swaylq.github.io/sijiao-skill/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="私教.skill">
+<meta property="og:title" content="私教.skill —— 把任何技能蒸馏成一个带你从 0 学会它的私教">
+<meta property="og:description" content="不是一张一次性的学习计划，是一个记得你学到哪、按你水平出题批改、排间隔复习的私教。8 路调研 + 学习科学蒸馏，天花板诚实标到「胜任」。">
+<meta property="og:url" content="https://swaylq.github.io/sijiao-skill/">
+<meta property="og:image" content="https://swaylq.github.io/sijiao-skill/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="私教.skill —— 把任何技能蒸馏成一个带你从 0 学会它的私教">
+<meta name="twitter:description" content="记得你学到哪、按你水平出题批改、排间隔复习的有状态私教。8 路调研 + 学习科学蒸馏。">
+<meta name="twitter:image" content="https://swaylq.github.io/sijiao-skill/assets/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "私教.skill",
+      "alternateName": ["sijiao.skill", "sijiao-skill", "私教 skill"],
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "macOS, Linux, Windows",
+      "url": "https://swaylq.github.io/sijiao-skill/",
+      "downloadUrl": "https://github.com/swaylq/sijiao-skill",
+      "codeRepository": "https://github.com/swaylq/sijiao-skill",
+      "programmingLanguage": ["Python", "Markdown"],
+      "license": "https://opensource.org/licenses/MIT",
+      "description": "输入任何想学的技能，跑 8 路调研、按学习科学蒸出一条从 0 到「胜任」的路径，生成一个有状态的私教 skill：记得你学到哪、按你水平出题批改、排间隔复习。",
+      "author": { "@type": "Person", "name": "swaylq", "url": "https://github.com/swaylq" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "私教.skill 和让 ChatGPT 列个学习计划有什么区别？",
+          "acceptedAnswer": { "@type": "Answer", "text": "学习计划是一张一次性的纸，发给你就结束了。私教.skill 生成的是一个有状态的目录：它记得你学到哪个模块、上次卡在哪、错过哪些题，按你当前水平出题并批改，还按 SM-2 算法排间隔复习。每次开课先清到期的复习项，再上新内容。" }
+        },
+        {
+          "@type": "Question",
+          "name": "它蒸出来的学习路径凭什么可信？",
+          "acceptedAnswer": { "@type": "Answer", "text": "每个生成的 skill 都要过一套学习特化质检：先修图必须无环且每条依赖挂得到来源；每个模块必须有能判对错的练习，不能是「多看书」；「会了」的标志必须行为化；正典资源需要至少 3 处独立推荐，拒绝内容农场；天花板不准吹「成为专家」。" }
+        },
+        {
+          "@type": "Question",
+          "name": "能把我教到什么程度？",
+          "acceptedAnswer": { "@type": "Answer", "text": "天花板诚实标在 Dreyfus 五段模型的「胜任」——能独立完成常规任务。精通和专家靠之后多年的真实实践，不是任何课程能给的。不告诉你局限的 skill 不值得信任。" }
+        },
+        {
+          "@type": "Question",
+          "name": "非认知技能（健身、护肤这种）也能教吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "能，但会诚实降级。AI 给不了手艺、身体和社交上的真实反馈，这类环节会明确标注转为自报、线下或真人，不假装能批改。比如英语阅读的样本就明标「只管阅读，不含听说写」。" }
+        },
+        {
+          "@type": "Question",
+          "name": "支持哪些 agent？",
+          "acceptedAnswer": { "@type": "Answer", "text": "任何读 SKILL.md 的 host，包括 Claude Code、OpenClaw、Codex、Hermit。生成出来的学习目录也能用 tools/install.py 装到指定 host。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="wordmark" href="/sijiao-skill/">私教<span class="dot">.</span>skill</a>
+    <nav class="topnav">
+      <a class="hide-sm" href="#demo">长什么样</a>
+      <a class="hide-sm" href="#what">蒸了什么</a>
+      <a class="hide-sm" href="#trust">凭什么信</a>
+      <a href="#install">安装</a>
+      <a href="en/">EN</a>
+      <a href="https://github.com/swaylq/sijiao-skill">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="shell hero">
+    <p class="eyebrow">sijiao.skill · MIT · 零依赖</p>
+    <h1>把任何技能，蒸成一个带你从 0 学会它的私教<span class="dot">.</span></h1>
+    <p class="lede">
+      告诉它你想学什么，它跑完 <strong>8 路调研</strong>、按学习科学蒸出一条从 0 到「胜任」的路径，
+      生成一个<strong>记得你学到哪、按你水平自适应出题批改</strong>的私教 skill。
+    </p>
+
+    <blockquote class="pull">
+      「给我列个学习计划」给你的是一张一次性的纸。<br>
+      这是一个记得你、陪你练、知道你卡在哪的私教。
+    </blockquote>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/swaylq/sijiao-skill">在 GitHub 上查看 →</a>
+      <a class="btn btn-ghost" href="#demo">看私教怎么上课</a>
+    </div>
+
+    <div class="copyline">
+      <span class="scroll"><code id="install-cmd">git clone https://github.com/swaylq/sijiao-skill.git ~/.claude/skills/sijiao-skill</code></span>
+      <button type="button" data-copy="#install-cmd">复制</button>
+    </div>
+
+    <dl class="stats">
+      <div class="stat"><dt>端到端样本</dt><dd>6</dd></div>
+      <div class="stat"><dt>已蒸模块</dt><dd class="cut">79</dd></div>
+      <div class="stat"><dt>调研路数</dt><dd>8</dd></div>
+      <div class="stat"><dt>工具测试</dt><dd>35<span class="unit"> 全绿</span></dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">私教长什么样</p>
+        <h2>不是搜索引擎，也不是一张学习计划</h2>
+        <p>是「一个记得你、陪你练的私教此刻在你旁边」。下面两段是真实的上课过程。</p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+          <span class="path">场景一 · Rust —— 读档 → 间隔复习 → 打薄弱点</span>
+        </div>
+<pre><span class="u">你    ❯</span> 继续学 rust
+
+<span class="a">私教  ❯</span> 读档：你在「借用与引用」<span class="hi">(mastery 0.55)</span>，上次卡在
+       &amp;mut 与 &amp; 同时存在的报错。今天先清一个到期复习，再啃这个坎。
+
+       【检索练习 · 借用三原则】不许翻书：
+       同一作用域，要么 ___ 个 &amp;，要么 ___ 个 &amp;mut，两者 ___ 共存。
+
+<span class="u">你    ❯</span> 任意多个 &amp;，或者一个 &amp;mut，不能同时
+
+<span class="a">私教  ❯</span> <span class="keep">✅ 记住了</span>，下次复习排到 6 天后。现在上今天的坎，这段过不了编译：
+
+         let mut v = vec![1,2,3];
+         let first = &amp;v[0];
+         v.push(4);            <span class="cut">// ← 编译器在这里报错</span>
+         println!("{first}");
+
+       先别看答案：first 借走了 v 的不可变引用，push 要 &amp;mut v，
+       这正违反你刚背的哪一条？</pre>
+      </div>
+
+      <div class="terminal" style="margin-top:var(--s-4)">
+        <div class="terminal-bar">
+          <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+          <span class="path">场景二 · 线性代数 —— 诊断出是「直觉缺口」而非基础问题</span>
+        </div>
+<pre><span class="u">你    ❯</span> 学线性代数，但我一看到特征值就懵
+
+<span class="a">私教  ❯</span> 读档：你卡在 eigenvalues，但前置的行列式、线性变换都过了 <span class="hi">(mastery 0.8+)</span>，
+       所以不是基础问题，是缺几何图像。<span class="cut">先别算特征多项式。</span>
+
+       一句话建图像：特征向量 = 这个矩阵『变换』作用下方向不变、只被拉伸的向量；
+       特征值 = 拉伸倍数。
+
+       看 [[2,0],[0,3]]：它把 x 轴拉 2 倍、y 轴拉 3 倍。
+       不用算 —— 你能直接说出它的两个特征向量和特征值吗？
+
+<span class="u">你    ❯</span> (1,0) 特征值 2，(0,1) 特征值 3
+
+<span class="a">私教  ❯</span> <span class="keep">✅ 这就是几何本质。</span>现在换一个非对角矩阵，从「方向不变」反推……</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="what">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">它蒸了什么</p>
+        <h2>一条按学习科学搭的路径，不是资料堆</h2>
+        <p>每个生成的 <code>{技能}-learn</code> 是自包含目录，分三层。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>层</th><th>文件</th><th>装了什么</th></tr></thead>
+          <tbody>
+            <tr><td>📚 课程层</td><td><code>curriculum.json</code></td><td>先修排序、Dreyfus 分段的模块，每个带 Bloom 分层目标、正典资源、可评估练习、里程碑，以及「会了的标志」</td></tr>
+            <tr><td>🧑‍🏫 教学层</td><td><code>SKILL.md</code></td><td>私教本体：读档 → 定位 → 讲解 → 范例 → 撤支架 → 独立练 → 出题批改</td></tr>
+            <tr><td>🗂️ 档案层</td><td><code>learner-state.json</code></td><td>你的进度、错题、SM-2 间隔重复排程、打卡（私人，不进 git）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head" style="margin-top:var(--s-16)">
+        <h2 style="font-size:var(--text-xl)">提炼遵循五条学习科学</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>原则</th><th>落地</th></tr></thead>
+          <tbody>
+            <tr><td>Dreyfus 五段</td><td>切分课程阶段；天花板定在「胜任」</td></tr>
+            <tr><td>Bloom 分类</td><td>每个目标定认知层级：记忆 → 理解 → 应用 → 分析 → 评价 → 创造</td></tr>
+            <tr><td>刻意练习</td><td>每模块必有「可产出可评估结果」的练习，不是「读完这本书」</td></tr>
+            <tr><td>间隔重复 + 检索练习</td><td>档案排程哪些该复习；每次开课先清到期项</td></tr>
+            <tr><td>合意难度</td><td>worked-example → 逐步撤支架 → 独立练</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trust">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">凭什么信</p>
+        <h2>一个学习路径装上来，怎么知道它不是随手编的</h2>
+        <p>每个生成的 skill 都要过一套学习特化质检，任一项不过就一票否决。</p>
+      </div>
+      <ul class="checks">
+        <li><span class="tick">✓</span><span><b>先修图无环且有据</b> —— 拓扑校验必须返回空；每条「先学 A 再学 B」都挂得到来源。</span></li>
+        <li><span class="tick">✓</span><span><b>每个模块都有可评估练习</b> —— 不是「多看书」，是「输出能被判对错的任务」。</span></li>
+        <li><span class="tick">✓</span><span><b>「会了」的标志是行为化的</b> —— 「能独立做 X」，不是「理解了 X」。</span></li>
+        <li><span class="tick">✓</span><span><b>来源一手</b> —— 正典资源需要至少 3 处独立推荐，拒绝 SEO 软文和内容农场。</span></li>
+        <li><span class="tick">✓</span><span><b>天花板诚实</b> —— 不准吹「成为专家」。精通和专家靠之后多年真实实践。</span></li>
+        <li><span class="tick">✓</span><span><b>教不了的明说</b> —— 手艺、身体、社交的真实反馈 AI 给不了，这类环节标注转自报、线下或真人，不假装能批改。</span></li>
+      </ul>
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        本仓 6 个样本的硬数字：79 个模块全部经引擎拓扑校验、课程由引擎渲染、档案示例通过 schema 验证，35 个测试覆盖工具引擎。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="samples">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">已蒸馏的样本</p>
+        <h2>六个端到端跑过的私教</h2>
+        <p>三层齐全、先修图经引擎校验，调研留痕完全透明，可追溯每个模块从哪来。</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>技能</th><th>类型</th><th>模块</th><th>天花板</th></tr></thead>
+          <tbody>
+            <tr><td>Rust 编程</td><td>硬技术（认知甜区）</td><td>15</td><td>胜任</td></tr>
+            <tr><td>线性代数</td><td>认知 / 数学</td><td>13</td><td>胜任</td></tr>
+            <tr><td>英语阅读理解</td><td>语言 · 认知甜区</td><td>12</td><td>胜任</td></tr>
+            <tr><td>科学减脂</td><td>生理 · 行为（诚实降级）</td><td>13</td><td>胜任</td></tr>
+            <tr><td>科学护肤</td><td>生理 · 行为（诚实降级）</td><td>13</td><td>胜任</td></tr>
+            <tr><td>力量训练</td><td>生理 · 行为（诚实降级）</td><td>13</td><td>胜任</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        减脂 / 护肤 / 力量训练是<strong>非认知技能</strong>，放进来是为了展示框架碰到这类技能怎么诚实降级 —— AI 教不了的部分标注转自报、线下或医生（⚠️ 非医疗建议）。
+        想学不在列表里的？装上私教.skill，说「学 XXX」就行。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="install">
+    <div class="shell">
+      <div class="section-head">
+        <p class="kicker">安装</p>
+        <h2>一条 clone，装进任意 host</h2>
+        <p>装好后在 agent 里直接说「学 rust」「继续学 rust」「考我 rust 所有权」。</p>
+      </div>
+
+      <div class="copyline">
+        <span class="scroll"><code id="install-cmd-2">git clone https://github.com/swaylq/sijiao-skill.git ~/.claude/skills/sijiao-skill</code></span>
+        <button type="button" data-copy="#install-cmd-2">复制</button>
+      </div>
+
+      <div class="table-wrap hosts">
+        <table>
+          <thead><tr><th>Host</th><th>目标路径</th></tr></thead>
+          <tbody>
+            <tr><td>Claude Code</td><td><code>~/.claude/skills/sijiao-skill</code></td></tr>
+            <tr><td>OpenClaw</td><td><code>~/.openclaw/skills/sijiao-skill</code></td></tr>
+            <tr><td>Codex</td><td><code>~/.codex/skills/sijiao-skill</code></td></tr>
+            <tr><td>Hermit</td><td><code>~/.hermit/skills/sijiao-skill</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:var(--s-6);font-size:var(--text-sm);color:var(--ink-muted);max-width:var(--measure)">
+        它先跟你确认五件事（技能、现有水平、目标、每周时间、语言），然后启动 8 路并行调研 → 按学习科学蒸馏 → 生成三层私教目录。
+        30–60 分钟后你拿到一个 <code>{技能}-learn</code>，装到任意 agent 立刻开课。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-line">
+      <a href="https://github.com/swaylq/sijiao-skill">GitHub</a>
+      <a href="https://github.com/swaylq/sijiao-skill/blob/main/SKILL.md">SKILL.md</a>
+      <a href="https://github.com/swaylq/sijiao-skill/tree/main/prototypes">六个样本</a>
+      <a href="https://master-skill.org/">大师.skill ↗</a>
+      <a href="en/">English</a>
+      <span style="color:var(--ink-faint)">MIT © <a href="https://github.com/swaylq">swaylq</a></span>
+    </div>
+    <p class="closing">
+      <a href="https://master-skill.org/">大师.skill</a> 让你的 AI 成为这一行的大师 —— <em>授人以鱼。</em><br>
+      私教.skill 把你训练成这个领域的大师 —— <em>授人以渔。</em>
+    </p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.querySelector(btn.dataset.copy).textContent.trim();
+    navigator.clipboard.writeText(text).then(function () {
+      var old = btn.textContent;
+      btn.textContent = '已复制';
+      setTimeout(function () { btn.textContent = old; }, 1600);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

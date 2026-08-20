@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /sijiao-skill/superpowers/
+
+Sitemap: https://swaylq.github.io/sijiao-skill/sitemap.xml
